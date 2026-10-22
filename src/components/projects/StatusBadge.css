@@ -1,0 +1,36 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: 0.5625rem;
+  line-height: 1;
+  padding: 0.45rem 0.55rem;
+  border: 2px solid var(--color-border);
+  box-shadow: 2px 2px 0 var(--color-shadow);
+}
+
+/* Tamamlandı: sitenin vurgu rengi */
+.status-badge--done {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Prototip: deneme aşaması, yumuşak pembe */
+.status-badge--prototype {
+  background: var(--palette-rosy-taupe);
+  color: var(--palette-midnight-violet);
+}
+
+/* Devam ediyor: dikkat çeken altın sarısı */
+.status-badge--in-progress {
+  background: var(--palette-gold);
+  color: var(--palette-midnight-violet);
+}
+
+/* Planlama: henüz kod yok, sakin gri-mor */
+.status-badge--planning {
+  background: var(--palette-dusty-grape);
+  color: #ffffff;
+}

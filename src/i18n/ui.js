@@ -33,7 +33,7 @@ export const ui = {
     solution: { tr: 'Çözüm', en: 'Solution' },
     next: { tr: 'Sırada', en: 'Next' },
     github: { tr: 'GitHub', en: 'GitHub' },
-    noRepo: { tr: 'Kod paylaşılmıyor', en: 'Code not public' },
+    tech: { tr: 'Kullanılan teknolojiler', en: 'Technologies used' },
   },
   status: {
     done: { tr: 'Tamamlandı', en: 'Completed' },

@@ -1,0 +1,98 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+/* Kartlar aynı satırda eşit boyda olsun, alt kısım (teknolojiler + link) hep en altta */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-sm);
+}
+
+.project-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.project-card__header h3 {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.project-card__context {
+  margin: -0.5rem 0 0;
+  color: var(--color-ink-soft);
+}
+
+.project-card__story {
+  margin: 0;
+}
+
+.project-card__story dt {
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  color: var(--color-accent);
+  margin-top: 0.75rem;
+}
+
+.project-card__story dt:first-child {
+  margin-top: 0;
+}
+
+.project-card__story dt::before {
+  content: '> ';
+}
+
+.project-card__story dd {
+  margin: 0.25rem 0 0;
+  line-height: 1.35;
+}
+
+.project-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 2px dashed var(--color-titlebar);
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card__tech li {
+  font-size: 1.125rem;
+  line-height: 1;
+  padding: 0.3rem 0.5rem;
+  border: 2px solid var(--color-titlebar);
+  color: var(--color-ink-soft);
+}
+
+.project-card__link {
+  font-size: 0.625rem;
+  padding: 0.6rem 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
