@@ -1,0 +1,17 @@
+import { useEffect, useState } from 'react'
+
+const query = '(prefers-reduced-motion: reduce)'
+
+// Sistemde "hareketi azalt" açık mı? Ayar değişirse canlı güncellenir.
+export function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(() => window.matchMedia(query).matches)
+
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    const onChange = () => setReduced(media.matches)
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+
+  return reduced
+}

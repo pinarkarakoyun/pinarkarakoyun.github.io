@@ -2,6 +2,7 @@ import { profile } from '../data/profile.js'
 import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
 import { Avatar } from './avatar/Avatar.jsx'
+import { WalkingCat } from './cat/WalkingCat.jsx'
 import './Hero.css'
 
 export function Hero() {
@@ -36,7 +37,10 @@ export function Hero() {
           </span>
         </div>
         <div className="hero__avatar-body">
-          <Avatar title={t(ui.hero.avatarAlt)} />
+          <div className="hero__scene">
+            <Avatar title={t(ui.hero.avatarAlt)} />
+            <WalkingCat />
+          </div>
         </div>
       </div>
     </section>

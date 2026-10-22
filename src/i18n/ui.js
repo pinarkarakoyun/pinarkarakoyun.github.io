@@ -49,6 +49,9 @@ export const ui = {
   skills: {
     languages: { tr: 'Diller', en: 'Languages' },
   },
+  cat: {
+    pet: { tr: 'Kediyi sev', en: 'Pet the cat' },
+  },
   languageToggle: {
     label: { tr: 'Dil seçimi', en: 'Language' },
   },

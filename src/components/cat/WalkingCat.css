@@ -1,0 +1,47 @@
+.walking-cat {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.walking-cat__sprite {
+  width: 100%;
+  height: auto;
+}
+
+/* Sola yürürken kareyi aynala */
+.walking-cat--left .walking-cat__sprite {
+  transform: scaleX(-1);
+}
+
+.walking-cat__heart {
+  position: absolute;
+  left: 50%;
+  bottom: 80%;
+  width: 40%;
+  height: auto;
+  pointer-events: none;
+  /* steps(): kalp yumuşak değil, piksel piksel yükselir */
+  animation: cat-heart-rise 1.3s steps(8) forwards;
+}
+
+@keyframes cat-heart-rise {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -160%);
+    opacity: 0;
+  }
+}
+
+/* Hareket azaltma açıksa kalp yükselmeden yerinde görünür (JS kısa süre sonra kaldırır) */
+@media (prefers-reduced-motion: reduce) {
+  .walking-cat__heart {
+    animation: none;
+    transform: translate(-50%, -40%);
+  }
+}

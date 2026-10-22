@@ -61,9 +61,15 @@
   background-size: 12px 12px;
 }
 
-.avatar {
+/* Avatar ve üstünde yürüyen kedi aynı kutuyu paylaşır; kedi yüzdeyle konumlanır */
+.hero__scene {
+  position: relative;
   width: 100%;
   max-width: 320px;
+}
+
+.avatar {
+  width: 100%;
   height: auto;
 }
 
