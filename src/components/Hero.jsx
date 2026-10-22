@@ -1,6 +1,7 @@
 import { profile } from '../data/profile.js'
 import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
+import { Avatar } from './avatar/Avatar.jsx'
 import './Hero.css'
 
 export function Hero() {
@@ -26,7 +27,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Avatar için yer tutucu: Adım 5'te piksel art avatar gelecek */}
       <div className="window hero__avatar">
         <div className="window__titlebar">
           player_01.png
@@ -35,7 +35,9 @@ export function Hero() {
             <span />
           </span>
         </div>
-        <div className="hero__avatar-body">{t(ui.hero.avatarSoon)}</div>
+        <div className="hero__avatar-body">
+          <Avatar title={t(ui.hero.avatarAlt)} />
+        </div>
       </div>
     </section>
   )

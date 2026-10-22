@@ -23,7 +23,10 @@ export const ui = {
     player: { tr: 'PLAYER 01', en: 'PLAYER 01' },
     greeting: { tr: 'Merhaba, ben', en: "Hi, I'm" },
     cta: { tr: 'Projelerime göz at', en: 'See my projects' },
-    avatarSoon: { tr: 'Avatar yükleniyor…', en: 'Avatar loading…' },
+    avatarAlt: {
+      tr: 'Pınar’ın piksel art avatarı: kıvırcık bakır saçlı, çilli, gülümsüyor; masada çıkartmalı bir laptop ve bir fincan kahve var',
+      en: 'Pixel art avatar of Pınar: curly copper hair, freckles and a smile, with a sticker-covered laptop and a cup of coffee on the desk',
+    },
   },
   project: {
     problem: { tr: 'Problem', en: 'Problem' },
