@@ -2,6 +2,7 @@
 // İçerik (projeler, deneyim) src/data altında; burada sadece sabit arayüz yazıları var.
 
 export const ui = {
+  skipLink: { tr: 'İçeriğe atla', en: 'Skip to content' },
   nav: {
     about: { tr: 'Hakkımda', en: 'About' },
     projects: { tr: 'Projeler', en: 'Projects' },

@@ -73,6 +73,11 @@ svg {
   outline-offset: 4px;
 }
 
+/* main'e "İçeriğe atla" ile odak gelince çerçeve çizilmesin (tıklanabilir bir öğe değil) */
+main:focus {
+  outline: none;
+}
+
 ::selection {
   background: var(--color-accent);
   color: var(--color-on-accent);

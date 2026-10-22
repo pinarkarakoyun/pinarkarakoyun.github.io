@@ -21,7 +21,9 @@
   --palette-dark-cyan: #4b8f8c;
   --palette-rosy-taupe: #c5979d;
   --palette-neon-mint: #6ee7b7;
-  --palette-cream: #f6efe4;
+  --palette-cream: #f3ebdd;
+  --palette-off-white: #fbf7f0;
+  --palette-deep-cyan: #2f6f6c; /* Dark Cyan'ın koyusu: krem zeminde okunaklı (WCAG AA) */
   --palette-gold: #f2c14e;
 
   /* Zemin ve yüzeyler */
@@ -63,16 +65,16 @@
   :root:not([data-theme='night']) {
     color-scheme: light;
     --color-bg: var(--palette-cream);
-    --color-window: #ffffff;
+    --color-window: var(--palette-off-white);
     --color-titlebar: var(--palette-rosy-taupe);
     --color-on-titlebar: var(--palette-midnight-violet);
     --color-ink: var(--palette-midnight-violet);
     --color-ink-soft: var(--palette-dusty-grape);
-    --color-accent: var(--palette-dark-cyan);
+    --color-accent: var(--palette-deep-cyan);
     --color-on-accent: #ffffff;
     --color-secondary: var(--palette-dusty-grape);
     --color-on-secondary: #ffffff;
-    --color-tertiary: var(--palette-dark-cyan);
+    --color-tertiary: var(--palette-deep-cyan);
     --color-border: var(--palette-midnight-violet);
     --color-shadow: var(--palette-midnight-violet);
     --color-star: transparent;
@@ -82,16 +84,16 @@
 :root[data-theme='day'] {
   color-scheme: light;
   --color-bg: var(--palette-cream);
-  --color-window: #ffffff;
+  --color-window: var(--palette-off-white);
   --color-titlebar: var(--palette-rosy-taupe);
   --color-on-titlebar: var(--palette-midnight-violet);
   --color-ink: var(--palette-midnight-violet);
   --color-ink-soft: var(--palette-dusty-grape);
-  --color-accent: var(--palette-dark-cyan);
+  --color-accent: var(--palette-deep-cyan);
   --color-on-accent: #ffffff;
   --color-secondary: var(--palette-dusty-grape);
   --color-on-secondary: #ffffff;
-  --color-tertiary: var(--palette-dark-cyan);
+  --color-tertiary: var(--palette-deep-cyan);
   --color-border: var(--palette-midnight-violet);
   --color-shadow: var(--palette-midnight-violet);
   --color-star: transparent;

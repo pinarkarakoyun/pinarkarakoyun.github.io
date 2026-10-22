@@ -99,8 +99,8 @@
 .icon-button {
   display: inline-grid;
   place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem; /* 44px: parmakla rahat basılabilen en küçük boyut */
+  height: 2.75rem;
   padding: 0;
   border: var(--border-width) solid var(--color-border);
   box-shadow: var(--shadow-pixel);
@@ -112,6 +112,25 @@
 .icon-button:hover {
   background: var(--color-titlebar);
   color: var(--color-on-titlebar);
+}
+
+/* "İçeriğe atla": sadece klavyeyle odaklanınca görünür */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: var(--border-width) solid var(--color-border);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
 
 /* Sadece ekran okuyucuların göreceği metin */

@@ -102,6 +102,26 @@
   }
 }
 
+/* Çok dar telefonlar (≤380px): her şey tek satıra sığsın */
+@media (max-width: 380px) {
+  .navbar__inner {
+    gap: 0.5rem;
+    padding-inline: 0.75rem;
+  }
+
+  .navbar__logo {
+    font-size: 0.75rem;
+  }
+
+  .navbar__logo span {
+    display: none; /* ".exe" gizlenir, "PINAR" kalır */
+  }
+
+  .navbar__actions {
+    gap: 0.5rem;
+  }
+}
+
 /* Masaüstüne geçince açık kalmış mobil menü görünmesin */
 @media (min-width: 861px) {
   .navbar__mobile {

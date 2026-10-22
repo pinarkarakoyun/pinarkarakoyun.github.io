@@ -7,7 +7,9 @@
 .language-toggle__button {
   font-family: var(--font-heading);
   font-size: 0.625rem;
-  padding: 0.5rem 0.75rem;
+  min-width: 2.75rem; /* 44px dokunma hedefi */
+  min-height: 2.75rem;
+  padding: 0 0.6rem;
   border: 0;
   background: var(--color-window);
   color: var(--color-ink);

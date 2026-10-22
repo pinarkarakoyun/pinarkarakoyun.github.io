@@ -6,12 +6,20 @@ import { Hero } from './components/Hero.jsx'
 import { Navbar } from './components/Navbar.jsx'
 import { Projects } from './components/projects/Projects.jsx'
 import { Skills } from './components/skills/Skills.jsx'
+import { useLanguage } from './i18n/useLanguage.js'
+import { ui } from './i18n/ui.js'
 
 function App() {
+  const { t } = useLanguage()
+
   return (
     <>
+      <a className="skip-link" href="#main">
+        {t(ui.skipLink)}
+      </a>
       <Navbar />
-      <main>
+      {/* tabIndex={-1}: "İçeriğe atla" ile gelen klavye odağı main'e taşınabilsin */}
+      <main id="main" tabIndex={-1}>
         <Hero />
         <About />
         <Projects />

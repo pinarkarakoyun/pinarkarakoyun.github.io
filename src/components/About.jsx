@@ -24,7 +24,7 @@ export function About() {
           </div>
         </article>
 
-        <aside className="window">
+        <div className="window">
           <WindowTitle>player_info.txt</WindowTitle>
           <dl className="window__body about__facts">
             {profile.facts.map((fact) => (
@@ -37,7 +37,7 @@ export function About() {
               </div>
             ))}
           </dl>
-        </aside>
+        </div>
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
 import { LanguageToggle } from './LanguageToggle.jsx'
@@ -13,12 +13,19 @@ const sections = ['about', 'projects', 'experience', 'skills', 'contact']
 export function Navbar() {
   const { t } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuButtonRef = useRef(null)
+  const mobileMenuRef = useRef(null)
 
-  // Mobil menü açıkken Escape tuşu kapatsın
+  // Mobil menü açılınca klavye odağı ilk linke geçsin;
+  // Escape ile kapanınca menü düğmesine geri dönsün (kullanıcı nerede kaldığını kaybetmesin)
   useEffect(() => {
     if (!menuOpen) return
+    mobileMenuRef.current?.querySelector('a')?.focus()
     const onKeyDown = (event) => {
-      if (event.key === 'Escape') setMenuOpen(false)
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        menuButtonRef.current?.focus()
+      }
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
@@ -47,6 +54,7 @@ export function Navbar() {
           <LanguageToggle />
           <ThemeToggle />
           <button
+            ref={menuButtonRef}
             type="button"
             className="icon-button navbar__menu-button"
             aria-expanded={menuOpen}
@@ -60,7 +68,7 @@ export function Navbar() {
       </div>
 
       {menuOpen && (
-        <nav id="mobile-menu" aria-label={t(ui.menu.main)} className="window navbar__mobile">
+        <nav ref={mobileMenuRef} id="mobile-menu" aria-label={t(ui.menu.main)} className="window navbar__mobile">
           <WindowTitle>{t(ui.menu.title)}</WindowTitle>
           <ul className="navbar__mobile-links">{links}</ul>
         </nav>
