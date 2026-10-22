@@ -81,33 +81,55 @@ export const education = [
   },
 ]
 
-// Sertifikalar, veren kuruma göre gruplu
+// Sertifikalar, veren kuruma göre gruplu. Kaynak: CV + LinkedIn "Lisanslar ve sertifikalar".
+// En çok sertifika olan kurum en üstte.
 export const certificates = [
+  {
+    issuer: 'IBM SkillsBuild',
+    items: [
+      'IBM AI Agents Bootcamp',
+      'Unleashing the Power of AI Agents',
+      'Foundations in Generative AI',
+      'Creating an Elevator Pitch Using Generative AI',
+      'Exploring Artificial Intelligence',
+      'Interacting with AI',
+      'AI Literacy',
+      'Exploring Cybersecurity',
+    ],
+    year: 2026,
+  },
+  {
+    issuer: 'BTK Akademi',
+    items: [
+      'Versiyon Kontrolleri: Git ve GitHub',
+      'Çevik Proje Yönetimi',
+      'API ve API Testi',
+      'Turkcell Robotik Süreç Otomasyonu (RPA)',
+      'Anthropic Claude',
+      'ChatGPT',
+    ],
+    year: 2026,
+  },
   {
     issuer: 'İş Bankası ProSchool · Toptalent.co',
     items: ['Digital Banking', 'Data & AI Class', 'IT Class'],
     year: 2026,
   },
   {
-    issuer: 'IBM SkillsBuild',
-    items: ['Exploring Cybersecurity', 'Foundations in Generative AI', 'AI Literacy'],
+    issuer: 'Anthropic Academy',
+    items: ['Claude 101'],
     year: 2026,
   },
   {
-    issuer: 'BTK Akademi',
-    items: ['Çevik Proje Yönetimi', 'ChatGPT', 'Anthropic Claude', 'API ve API Testi'],
-    year: 2026,
-  },
-  {
-    issuer: 'Turkcell',
-    items: ['Robotik Süreç Otomasyonu (RPA)'],
+    issuer: 'Kodluyoruz',
+    items: ['IBM AI Agents Bootcamp'],
     year: 2026,
   },
   {
     issuer: 'Kariyer.net',
     items: [
-      'Yapay Zekâ ile İç Eğitmenlik Süreçlerini Verimli Hale Getirmek',
       'Yapay Zeka Araçları ile Eğitim Tasarımı',
+      'Yapay Zekâ ile İç Eğitmenlik Süreçlerini Verimli Hale Getirmek',
     ],
     year: 2026,
   },

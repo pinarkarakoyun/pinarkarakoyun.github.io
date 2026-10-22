@@ -1,0 +1,132 @@
+/* ---------- Zaman çizelgesi ---------- */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2.5rem;
+  list-style: none;
+}
+
+/* Soldaki kesik piksel çizgi */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 4px;
+  background: repeating-linear-gradient(var(--color-titlebar) 0 8px, transparent 8px 14px);
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+/* Her stajın çizgi üzerindeki kare noktası */
+.timeline__node {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-titlebar);
+  border: var(--border-width) solid var(--color-border);
+}
+
+.timeline__item--current .timeline__node {
+  background: var(--color-accent);
+  animation: timeline-blink 1s steps(2) infinite;
+}
+
+@keyframes timeline-blink {
+  50% {
+    background: var(--color-window);
+  }
+}
+
+.timeline__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.timeline__role {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--color-accent);
+}
+
+.timeline__now {
+  font-family: var(--font-heading);
+  font-size: 0.5625rem;
+  padding: 0.35rem 0.5rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.timeline__period {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.timeline__highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.timeline__highlights li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* ---------- Eğitim ve sertifikalar ---------- */
+.experience__subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+/* Altın sarısı piksel kare (★ karakteri piksel fontta yok) */
+.experience__subtitle::before {
+  content: '';
+  width: 0.7em;
+  height: 0.7em;
+  background: var(--palette-gold);
+  box-shadow: 2px 2px 0 var(--color-shadow);
+}
+
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  align-items: start;
+  gap: var(--space-md);
+}
+
+.certificates__list {
+  margin: 0;
+  list-style: none;
+}
+
+.certificates__list li {
+  padding: 0.35rem 0;
+  line-height: 1.3;
+  border-bottom: 2px dashed var(--color-titlebar);
+}
+
+.certificates__list li:last-child {
+  border-bottom: 0;
+}
