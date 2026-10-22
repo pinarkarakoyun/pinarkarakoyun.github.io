@@ -1,10 +1,11 @@
-// Geçici stil önizlemesi: palet, fontlar ve pencere görünümünü görmek için.
+// Geçici önizleme: dil geçişini gerçek veriyle denemek için.
 // 4. adımda yerini Navbar ve Hero bileşenleri alacak.
 
-const badges = [
-  { name: 'Tamamlandı', bg: 'var(--color-accent)', fg: 'var(--color-on-accent)' },
-  { name: 'Devam ediyor', bg: 'var(--color-secondary)', fg: 'var(--color-on-secondary)' },
-]
+import { LanguageToggle } from './components/LanguageToggle.jsx'
+import { profile } from './data/profile.js'
+import { projects } from './data/projects.js'
+import { useLanguage } from './i18n/useLanguage.js'
+import { ui } from './i18n/ui.js'
 
 const windowStyle = {
   background: 'var(--color-window)',
@@ -23,29 +24,38 @@ const titlebarStyle = {
 }
 
 function App() {
+  const { t } = useLanguage()
+  const project = projects[0]
+
   return (
     <main style={{ maxWidth: 'var(--content-width)', margin: '0 auto', padding: 'var(--space-lg) var(--space-sm)' }}>
-      <h1>Merhaba, ben Pınar</h1>
-      <h2>Gerçek problemlere çözüm</h2>
-      <p style={{ color: 'var(--color-ink-soft)' }}>
-        Bu sayfa geçici bir stil önizlemesi. Türkçe karakter testi: ığüşöç İĞÜŞÖÇ
-      </p>
+      <LanguageToggle />
+      <h1 style={{ marginTop: 'var(--space-md)' }}>
+        {t(ui.hero.greeting)} {profile.name}
+      </h1>
+      <h2>{t(profile.title)}</h2>
+      <p style={{ color: 'var(--color-ink-soft)' }}>{t(profile.tagline)}</p>
 
       <section style={windowStyle}>
-        <div style={titlebarStyle}>proje_01.exe</div>
+        <div style={titlebarStyle}>{project.id}.exe</div>
         <div style={{ padding: 'var(--space-sm)' }}>
-          <h3>Mustan Tailoring</h3>
-          <p>Terzi dükkânı için web sitesi ve sipariş takibi.</p>
-          <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
-            {badges.map((b) => (
-              <span
-                key={b.name}
-                style={{ background: b.bg, color: b.fg, padding: '0.1rem 0.75rem', border: '2px solid var(--color-border)' }}
-              >
-                {b.name}
-              </span>
-            ))}
-          </div>
+          <h3>{project.title}</h3>
+          <p>
+            <strong>{t(ui.project.problem)}:</strong> {t(project.problem)}
+          </p>
+          <p>
+            <strong>{t(ui.project.solution)}:</strong> {t(project.solution)}
+          </p>
+          <span
+            style={{
+              background: 'var(--color-secondary)',
+              color: 'var(--color-on-secondary)',
+              padding: '0.1rem 0.75rem',
+              border: '2px solid var(--color-border)',
+            }}
+          >
+            {t(ui.status[project.status])}
+          </span>
         </div>
       </section>
     </main>

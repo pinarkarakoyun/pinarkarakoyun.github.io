@@ -1,0 +1,29 @@
+.language-toggle {
+  display: inline-flex;
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-pixel);
+}
+
+.language-toggle__button {
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  background: var(--color-window);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.language-toggle__button + .language-toggle__button {
+  border-left: var(--border-width) solid var(--color-border);
+}
+
+.language-toggle__button[aria-pressed='true'] {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.language-toggle__button:hover:not([aria-pressed='true']) {
+  background: var(--color-titlebar);
+  color: var(--color-on-titlebar);
+}
