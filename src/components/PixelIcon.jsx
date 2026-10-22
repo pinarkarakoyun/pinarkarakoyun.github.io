@@ -1,0 +1,56 @@
+// 8x8 ızgarada çizilmiş küçük piksel ikonlar.
+// Her satır bir dizi: '#' = dolu piksel, '.' = boş. Renk, kapsayan öğenin yazı renginden gelir.
+
+const icons = {
+  sun: [
+    '...#....',
+    '.#...#..',
+    '...##...',
+    '#.####.#',
+    '..####..',
+    '...##...',
+    '.#...#..',
+    '....#...',
+  ],
+  moon: [
+    '..####..',
+    '.##.....',
+    '##......',
+    '##......',
+    '##......',
+    '.##.....',
+    '..####..',
+    '........',
+  ],
+  menu: [
+    '........',
+    '########',
+    '........',
+    '########',
+    '........',
+    '########',
+    '........',
+    '........',
+  ],
+  close: [
+    '#......#',
+    '.#....#.',
+    '..#..#..',
+    '...##...',
+    '...##...',
+    '..#..#..',
+    '.#....#.',
+    '#......#',
+  ],
+}
+
+export function PixelIcon({ name, size = 20 }) {
+  const rows = icons[name]
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" shapeRendering="crispEdges" aria-hidden="true" fill="currentColor">
+      {rows.flatMap((row, y) =>
+        [...row].map((cell, x) => (cell === '#' ? <rect key={`${x}-${y}`} x={x} y={y} width="1" height="1" /> : null)),
+      )}
+    </svg>
+  )
+}

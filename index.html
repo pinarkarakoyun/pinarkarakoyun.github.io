@@ -15,6 +15,13 @@
       rel="stylesheet"
     />
     <title>Pınar Karakoyun</title>
+    <script>
+      // Kayıtlı temayı React yüklenmeden uygula (yanlış temanın bir an görünmesini önler)
+      try {
+        const theme = localStorage.getItem('portfolio-theme')
+        if (theme === 'day' || theme === 'night') document.documentElement.dataset.theme = theme
+      } catch {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

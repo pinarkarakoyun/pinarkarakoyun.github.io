@@ -1,0 +1,101 @@
+/* Sitenin birçok yerinde tekrar kullanılan piksel arayüz parçaları */
+
+/* ---------- Win95 tarzı pencere ---------- */
+.window {
+  background: var(--color-window);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-pixel);
+}
+
+.window__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  background: var(--color-titlebar);
+  color: var(--color-on-titlebar);
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+/* Başlık çubuğundaki süs düğmeleri (_ □ ×) */
+.window__controls {
+  display: flex;
+  gap: 4px;
+}
+
+.window__controls span {
+  width: 12px;
+  height: 12px;
+  background: var(--color-window);
+  border: 2px solid var(--color-border);
+}
+
+.window__body {
+  padding: var(--space-sm);
+}
+
+/* ---------- Butonlar ---------- */
+.pixel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.85rem 1.1rem;
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-pixel);
+  background: var(--color-window);
+  color: var(--color-ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 80ms steps(2);
+}
+
+.pixel-button--primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Basılınca gölgenin üstüne "oturur": fiziksel buton hissi */
+.pixel-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-shadow);
+}
+
+.pixel-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+/* Kare ikon düğmesi (tema, menü) */
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-pixel);
+  background: var(--color-window);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: var(--color-titlebar);
+  color: var(--color-on-titlebar);
+}
+
+/* Sadece ekran okuyucuların göreceği metin */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

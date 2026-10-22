@@ -9,9 +9,21 @@ export const ui = {
     skills: { tr: 'Yetenekler', en: 'Skills' },
     contact: { tr: 'İletişim', en: 'Contact' },
   },
+  menu: {
+    open: { tr: 'Menüyü aç', en: 'Open menu' },
+    close: { tr: 'Menüyü kapat', en: 'Close menu' },
+    title: { tr: 'menu.exe', en: 'menu.exe' },
+    main: { tr: 'Ana menü', en: 'Main menu' },
+  },
+  theme: {
+    toDay: { tr: 'Gündüz temasına geç', en: 'Switch to day theme' },
+    toNight: { tr: 'Gece temasına geç', en: 'Switch to night theme' },
+  },
   hero: {
+    player: { tr: 'PLAYER 01', en: 'PLAYER 01' },
     greeting: { tr: 'Merhaba, ben', en: "Hi, I'm" },
     cta: { tr: 'Projelerime göz at', en: 'See my projects' },
+    avatarSoon: { tr: 'Avatar yükleniyor…', en: 'Avatar loading…' },
   },
   project: {
     problem: { tr: 'Problem', en: 'Problem' },
