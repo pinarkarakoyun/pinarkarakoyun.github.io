@@ -1,0 +1,72 @@
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  align-items: start;
+  gap: var(--space-md);
+}
+
+.skills__group-title {
+  font-size: 0.6875rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+/* Envanter kutucukları */
+.skills__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills__items li {
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.45rem 0.65rem;
+  background: var(--color-bg);
+  border: 2px solid var(--color-border);
+  box-shadow: 2px 2px 0 var(--color-titlebar);
+}
+
+/* ---------- Diller ---------- */
+.languages {
+  margin: 0;
+}
+
+.languages__row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+}
+
+.languages__row dt {
+  font-size: 1.25rem;
+}
+
+.languages__row dd {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+.languages__bar {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.languages__bar span {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.languages__bar span.is-filled {
+  background: var(--color-accent);
+}
