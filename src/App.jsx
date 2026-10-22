@@ -1,3 +1,4 @@
+import { About } from './components/About.jsx'
 import { Hero } from './components/Hero.jsx'
 import { Navbar } from './components/Navbar.jsx'
 
@@ -7,6 +8,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <About />
       </main>
     </>
   )

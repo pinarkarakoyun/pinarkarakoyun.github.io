@@ -1,5 +1,29 @@
 /* Sitenin birçok yerinde tekrar kullanılan piksel arayüz parçaları */
 
+/* ---------- Sayfa bölümleri ---------- */
+.section {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-sm) 0;
+  scroll-margin-top: 4rem; /* sabit navbar başlığı örtmesin */
+}
+
+.section__title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* Başlığın önündeki küçük neon kare */
+.section__title::before {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  background: var(--color-accent);
+  box-shadow: 3px 3px 0 var(--color-shadow);
+}
+
 /* ---------- Win95 tarzı pencere ---------- */
 .window {
   background: var(--color-window);

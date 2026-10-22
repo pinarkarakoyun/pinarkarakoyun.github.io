@@ -4,6 +4,7 @@ import { ui } from '../i18n/ui.js'
 import { LanguageToggle } from './LanguageToggle.jsx'
 import { PixelIcon } from './PixelIcon.jsx'
 import { ThemeToggle } from './ThemeToggle.jsx'
+import { WindowTitle } from './WindowTitle.jsx'
 import './Navbar.css'
 
 // Menüdeki bölümler: id, sayfadaki <section id="..."> ile eşleşir
@@ -60,13 +61,7 @@ export function Navbar() {
 
       {menuOpen && (
         <nav id="mobile-menu" aria-label={t(ui.menu.main)} className="window navbar__mobile">
-          <div className="window__titlebar">
-            {t(ui.menu.title)}
-            <span className="window__controls" aria-hidden="true">
-              <span />
-              <span />
-            </span>
-          </div>
+          <WindowTitle>{t(ui.menu.title)}</WindowTitle>
           <ul className="navbar__mobile-links">{links}</ul>
         </nav>
       )}

@@ -24,6 +24,14 @@ export const profile = {
     ],
   },
   location: { tr: 'Antalya, Türkiye', en: 'Antalya, Türkiye' },
+  // Hakkımda bölümündeki karakter kartı. icon: PixelIcon'daki ikon adı
+  facts: [
+    { icon: 'pin', label: { tr: 'Konum', en: 'Location' }, value: { tr: 'Antalya, Türkiye', en: 'Antalya, Türkiye' } },
+    { icon: 'cap', label: { tr: 'Okul', en: 'School' }, value: { tr: 'Antalya Bilim Üniversitesi', en: 'Antalya Bilim University' } },
+    { icon: 'star', label: { tr: 'Seviye', en: 'Level' }, value: { tr: '4. sınıf', en: 'Senior (4th year)' } },
+    { icon: 'sword', label: { tr: 'Şu an', en: 'Current quest' }, value: { tr: 'Elektraweb stajyeri', en: 'Intern at Elektraweb' } },
+    { icon: 'cup', label: { tr: 'Yakıt', en: 'Fuel' }, value: { tr: 'Kahve', en: 'Coffee' } },
+  ],
   links: {
     email: 'pinarkarakoyun7@hotmail.com',
     github: 'https://github.com/pinarkarakoyun',

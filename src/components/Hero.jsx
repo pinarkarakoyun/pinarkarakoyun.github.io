@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
 import { Avatar } from './avatar/Avatar.jsx'
 import { WalkingCat } from './cat/WalkingCat.jsx'
+import { WindowTitle } from './WindowTitle.jsx'
 import './Hero.css'
 
 export function Hero() {
@@ -29,13 +30,7 @@ export function Hero() {
       </div>
 
       <div className="window hero__avatar">
-        <div className="window__titlebar">
-          player_01.png
-          <span className="window__controls" aria-hidden="true">
-            <span />
-            <span />
-          </span>
-        </div>
+        <WindowTitle>player_01.png</WindowTitle>
         <div className="hero__avatar-body">
           <div className="hero__scene">
             <Avatar title={t(ui.hero.avatarAlt)} />
