@@ -1,121 +1,54 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+// Geçici stil önizlemesi: palet, fontlar ve pencere görünümünü görmek için.
+// 4. adımda yerini Navbar ve Hero bileşenleri alacak.
+
+const badges = [
+  { name: 'Tamamlandı', bg: 'var(--color-accent)', fg: 'var(--color-on-accent)' },
+  { name: 'Devam ediyor', bg: 'var(--color-secondary)', fg: 'var(--color-on-secondary)' },
+]
+
+const windowStyle = {
+  background: 'var(--color-window)',
+  border: 'var(--border-width) solid var(--color-border)',
+  boxShadow: 'var(--shadow-pixel)',
+  marginTop: 'var(--space-md)',
+}
+
+const titlebarStyle = {
+  background: 'var(--color-titlebar)',
+  color: 'var(--color-on-titlebar)',
+  fontFamily: 'var(--font-heading)',
+  fontSize: '0.625rem',
+  padding: '0.5rem 0.75rem',
+  borderBottom: 'var(--border-width) solid var(--color-border)',
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <main style={{ maxWidth: 'var(--content-width)', margin: '0 auto', padding: 'var(--space-lg) var(--space-sm)' }}>
+      <h1>Merhaba, ben Pınar</h1>
+      <h2>Gerçek problemlere çözüm</h2>
+      <p style={{ color: 'var(--color-ink-soft)' }}>
+        Bu sayfa geçici bir stil önizlemesi. Türkçe karakter testi: ığüşöç İĞÜŞÖÇ
+      </p>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      <section style={windowStyle}>
+        <div style={titlebarStyle}>proje_01.exe</div>
+        <div style={{ padding: 'var(--space-sm)' }}>
+          <h3>Mustan Tailoring</h3>
+          <p>Terzi dükkânı için web sitesi ve sipariş takibi.</p>
+          <div style={{ display: 'flex', gap: 'var(--space-xs)', flexWrap: 'wrap' }}>
+            {badges.map((b) => (
+              <span
+                key={b.name}
+                style={{ background: b.bg, color: b.fg, padding: '0.1rem 0.75rem', border: '2px solid var(--color-border)' }}
+              >
+                {b.name}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    </main>
   )
 }
 

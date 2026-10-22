@@ -1,0 +1,91 @@
+/* Temel stiller: sıfırlama, piksel tipografi ve sitenin her yerinde geçerli kurallar */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1.375rem; /* VT323 küçük görünür, bu yüzden ~22px */
+  line-height: 1.4;
+  /* Gece gökyüzü: iki katman noktadan oluşan yıldız deseni (gündüzde --color-star şeffaf) */
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(var(--color-star) 1px, transparent 1px),
+    radial-gradient(var(--color-star) 1px, transparent 1px);
+  background-size:
+    48px 48px,
+    80px 80px;
+  background-position:
+    0 0,
+    24px 40px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 400; /* Press Start 2P'nin tek ağırlığı var */
+  line-height: 1.5;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+}
+
+h3 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin: 0 0 var(--space-sm);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  image-rendering: pixelated; /* Piksel görseller büyütülünce bulanıklaşmasın */
+}
+
+:focus-visible {
+  outline: 3px dashed var(--color-accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+/* Hareket hassasiyeti olanlar için animasyonları kapat */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

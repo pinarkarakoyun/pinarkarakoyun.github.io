@@ -1,0 +1,97 @@
+/*
+  Tasarım token'ları: sitedeki bütün renk, font ve ölçü değerleri buradan gelir.
+  Tarz: retro piksel oyun. İki tema var:
+    - Gece (varsayılan, koyu)
+    - Gündüz (krem)
+  Tema seçimi: html[data-theme="night" | "day"]. Özellik yoksa sistem ayarı takip edilir.
+*/
+
+/* ---------- Gece teması (varsayılan) ---------- */
+:root {
+  color-scheme: dark;
+
+  /* Fontlar */
+  --font-heading: 'Press Start 2P', monospace;
+  --font-body: 'VT323', monospace;
+
+  /* Temel palet: temadan bağımsız sabit renkler */
+  --palette-midnight-violet: #2b193d;
+  --palette-twilight-indigo: #2c365e;
+  --palette-dusty-grape: #484d6d;
+  --palette-dark-cyan: #4b8f8c;
+  --palette-rosy-taupe: #c5979d;
+  --palette-neon-mint: #6ee7b7;
+  --palette-cream: #f6efe4;
+
+  /* Zemin ve yüzeyler */
+  --color-bg: var(--palette-midnight-violet);
+  --color-window: var(--palette-twilight-indigo);
+  --color-titlebar: var(--palette-dusty-grape);
+  --color-on-titlebar: #f4edef;
+
+  /* Yazı renkleri */
+  --color-ink: #f4edef;
+  --color-ink-soft: #c9bccd;
+
+  /* Vurgular */
+  --color-accent: var(--palette-neon-mint);
+  --color-on-accent: var(--palette-midnight-violet);
+  --color-secondary: var(--palette-rosy-taupe);
+  --color-on-secondary: var(--palette-midnight-violet);
+  --color-tertiary: var(--palette-dark-cyan);
+
+  --color-border: #0f0918;
+  --color-shadow: #0f0918;
+  --color-star: rgb(244 237 239 / 0.35);
+
+  /* Ölçüler: piksel tarzı = keskin köşeler, sert gölgeler */
+  --radius: 0;
+  --border-width: 3px;
+  --shadow-pixel: 4px 4px 0 var(--color-shadow);
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+  --content-width: 1100px;
+}
+
+/* ---------- Gündüz teması ---------- */
+/* Gündüz değerleri iki yerde gerekli: sistem açık temadaysa ve kullanıcı "day" seçtiyse */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='night']) {
+    color-scheme: light;
+    --color-bg: var(--palette-cream);
+    --color-window: #ffffff;
+    --color-titlebar: var(--palette-rosy-taupe);
+    --color-on-titlebar: var(--palette-midnight-violet);
+    --color-ink: var(--palette-midnight-violet);
+    --color-ink-soft: var(--palette-dusty-grape);
+    --color-accent: var(--palette-dark-cyan);
+    --color-on-accent: #ffffff;
+    --color-secondary: var(--palette-dusty-grape);
+    --color-on-secondary: #ffffff;
+    --color-tertiary: var(--palette-dark-cyan);
+    --color-border: var(--palette-midnight-violet);
+    --color-shadow: var(--palette-midnight-violet);
+    --color-star: transparent;
+  }
+}
+
+:root[data-theme='day'] {
+  color-scheme: light;
+  --color-bg: var(--palette-cream);
+  --color-window: #ffffff;
+  --color-titlebar: var(--palette-rosy-taupe);
+  --color-on-titlebar: var(--palette-midnight-violet);
+  --color-ink: var(--palette-midnight-violet);
+  --color-ink-soft: var(--palette-dusty-grape);
+  --color-accent: var(--palette-dark-cyan);
+  --color-on-accent: #ffffff;
+  --color-secondary: var(--palette-dusty-grape);
+  --color-on-secondary: #ffffff;
+  --color-tertiary: var(--palette-dark-cyan);
+  --color-border: var(--palette-midnight-violet);
+  --color-shadow: var(--palette-midnight-violet);
+  --color-star: transparent;
+}
