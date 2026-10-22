@@ -15,7 +15,7 @@ export const skillGroups = [
   },
   {
     title: { tr: 'Süreç & Otomasyon', en: 'Process & Automation' },
-    items: ['RPA', 'Paperwork', 'SAP', 'eBA', 'Draw.io'],
+    items: ['RPA', 'n8n', 'Paperwork BPM', 'SAP', 'eBA', 'Draw.io', 'Agile / Scrum'],
   },
   {
     title: { tr: 'Araçlar', en: 'Tools' },

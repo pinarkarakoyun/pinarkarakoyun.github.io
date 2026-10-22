@@ -12,11 +12,13 @@ export const experience = [
     location: 'Antalya',
     highlights: {
       tr: [
+        'TÜBİTAK 1501 Sanayi Ar-Ge programından destek alan Talya QMS-AI projesinin ekibinde stajyer olarak yer alıyorum. Proje, otellerdeki kalite sorunlarının kök nedenlerini yapay zekâ ile bulup risklere karşı erken uyarı vermeyi hedefliyor.',
         'Elektra QM (kalite yönetimi) sistemi için modül modül kullanıcı kılavuzu hazırladım; insan kaynakları, doküman yönetimi gibi ekranların nasıl kullanılacağını adım adım anlattım.',
         'Elektraweb için rakip ve pazar analizi raporu hazırladım.',
         'QM sistemi üzerindeki çalışmalarıma devam ediyorum.',
       ],
       en: [
+        'Part of the team, as an intern, on Talya QMS-AI, a project funded by TÜBİTAK’s 1501 Industrial R&D program. It uses AI to find root causes of quality issues in hotels and give early warnings about risks.',
         'Wrote a module-by-module user guide for the Elektra QM (quality management) system, explaining step by step how to use screens such as human resources and document management.',
         'Prepared a competitor and market analysis report for Elektraweb.',
         'Continuing my work on the QM system.',
@@ -33,18 +35,18 @@ export const experience = [
     location: 'Antalya',
     highlights: {
       tr: [
-        'İş süreçlerinin analizi ve kurumsal süreç akışlarının oluşturulması çalışmalarında yer aldım.',
-        'Draw.io ile süreçleri şemalandırdım ve akış diyagramları çıkardım.',
-        'Excel ile veri düzenleme, analiz ve süreç raporlama yaptım.',
-        'Paperwork platformunda iş akışlarını, doküman yönetimini ve otomasyon adımlarını inceledim.',
-        'RPA uygulamalarını ve SAP modüllerini kurumsal süreçlerin dijitalleştirilmesi açısından analiz ettim.',
+        'SAP Ürün Kartı parametrelerini JavaScript ile kullanıcı dostu, modüler ve dinamik bir forma dönüştürdüm.',
+        'Paperwork BPM platformunda çok kademeli müşteri onay akışları modelledim; süreçleri Draw.io ile şemalandırdım.',
+        'Üretim verilerini SAP ERP tüketim kayıtlarıyla eşleştirip hammadde sapma analizleri hazırladım.',
+        'n8n üzerindeki filo takip entegrasyonunu canlı araç verileriyle uçtan uca test ettim.',
+        'BT ekibinde Active Directory yapısını inceledim, şirketin yerel yapay zekâsı için kıyaslama analizleri yaptım ve ekibe IoT üzerine bir seminer sundum.',
       ],
       en: [
-        'Took part in analyzing business processes and designing corporate process flows.',
-        'Mapped processes and created flow diagrams with Draw.io.',
-        'Cleaned, analyzed and reported process data with Excel.',
-        'Studied workflows, document management and automation steps on the Paperwork platform.',
-        'Analyzed RPA solutions and SAP modules from the perspective of digitalizing business processes.',
+        'Turned SAP product card parameters into a user-friendly, modular and dynamic form using JavaScript.',
+        'Modeled multi-level customer approval workflows on the Paperwork BPM platform and mapped processes with Draw.io.',
+        'Matched production data with SAP ERP consumption records and prepared raw material deviation analyses.',
+        'Tested the fleet tracking integration on n8n end to end with live vehicle data.',
+        "On the IT team, studied the Active Directory setup, ran benchmark analyses for the company's in-house AI and gave the team a seminar on IoT.",
       ],
     },
   },
@@ -58,14 +60,14 @@ export const experience = [
     location: 'Antalya',
     highlights: {
       tr: [
-        'HTML, CSS ve JavaScript ile kurumsal chatbot (eBAssist) geliştirdim.',
-        'Chatbot’un kullanıcı arayüzüne ve etkileşimlerine katkı sağladım.',
-        'eBA platformu ve kurumsal iş akışları hakkında bilgi edindim.',
+        'Şirketin doküman yönetim platformu eBA için bir chatbot arayüzünü (eBAssist) HTML, CSS ve JavaScript ile sıfırdan tasarlayıp geliştirdim.',
+        'Projeyi ekibe sunup geri bildirim aldım ve işlevsellik için öneriler geliştirdim.',
+        'Yazılım geliştirme süreçlerini ve kullanıcı deneyimi odaklı düşünmeyi kurum içinde yakından gözlemledim.',
       ],
       en: [
-        'Developed an enterprise chatbot (eBAssist) with HTML, CSS and JavaScript.',
-        'Contributed to the chatbot’s user interface and interactions.',
-        'Learned about the eBA platform and corporate workflows.',
+        "Designed and built a chatbot interface (eBAssist) from scratch for the company's eBA document management platform, using HTML, CSS and JavaScript.",
+        'Presented the project to the team, gathered feedback and proposed functional improvements.',
+        'Observed software development processes and UX-oriented thinking up close in a corporate setting.',
       ],
     },
   },
