@@ -49,6 +49,17 @@ export const ui = {
   skills: {
     languages: { tr: 'Diller', en: 'Languages' },
   },
+  contact: {
+    invite: {
+      tr: 'Staj ve yeni mezun pozisyonlarına açığım. Gerçek bir problemin varsa, birlikte çözelim!',
+      en: "I'm open to internships and new graduate roles. Got a real-life problem? Let's solve it together!",
+    },
+    email: { tr: 'E-posta gönder', en: 'Send an email' },
+    copy: { tr: 'Kopyala', en: 'Copy' },
+    copyLabel: { tr: 'E-posta adresini kopyala', en: 'Copy email address' },
+    copied: { tr: 'Kopyalandı!', en: 'Copied!' },
+    copyFailed: { tr: 'Kopyalanamadı, adresi elle seçebilirsin.', en: "Couldn't copy. You can select the address by hand." },
+  },
   cat: {
     pet: { tr: 'Kediyi sev', en: 'Pet the cat' },
   },
