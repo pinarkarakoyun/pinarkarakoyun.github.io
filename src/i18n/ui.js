@@ -62,6 +62,9 @@ export const ui = {
     copied: { tr: 'Kopyalandı!', en: 'Copied!' },
     copyFailed: { tr: 'Kopyalanamadı, adresi elle seçebilirsin.', en: "Couldn't copy. You can select the address by hand." },
   },
+  cv: {
+    download: { tr: 'CV indir', en: 'Download CV' },
+  },
   cat: {
     pet: { tr: 'Kediyi sev', en: 'Pet the cat' },
   },

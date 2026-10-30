@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { profile } from '../../data/profile.js'
 import { useLanguage } from '../../i18n/useLanguage.js'
 import { ui } from '../../i18n/ui.js'
+import { CvDownloadLink } from '../CvDownloadLink.jsx'
 import { PixelIcon } from '../PixelIcon.jsx'
 import { WindowTitle } from '../WindowTitle.jsx'
 import './Contact.css'
@@ -71,6 +72,7 @@ export function Contact() {
               <PixelIcon name="linkedin" size={16} />
               LinkedIn
             </a>
+            <CvDownloadLink />
           </div>
         </div>
       </div>

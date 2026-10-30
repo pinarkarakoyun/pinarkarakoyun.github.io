@@ -41,8 +41,8 @@ export function Experience() {
 
       <h3 className="experience__subtitle">{t(ui.experience.education)}</h3>
       {education.map((item) => (
-        <article className="window" key={item.school}>
-          <WindowTitle>{item.school}</WindowTitle>
+        <article className="window" key={t(item.school)}>
+          <WindowTitle>{t(item.school)}</WindowTitle>
           <div className="window__body">
             <p className="timeline__role">{t(item.degree)}</p>
             <p className="timeline__period">{t(item.period)}</p>

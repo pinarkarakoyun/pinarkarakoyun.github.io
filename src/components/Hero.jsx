@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
 import { Avatar } from './avatar/Avatar.jsx'
 import { WalkingCat } from './cat/WalkingCat.jsx'
+import { CvDownloadLink } from './CvDownloadLink.jsx'
 import { WindowTitle } from './WindowTitle.jsx'
 import './Hero.css'
 
@@ -23,6 +24,7 @@ export function Hero() {
           <a href="#projects" className="pixel-button pixel-button--primary">
             ▶ {t(ui.hero.cta)}
           </a>
+          <CvDownloadLink />
           <a href={profile.links.github} className="pixel-button" target="_blank" rel="noreferrer">
             GitHub
           </a>

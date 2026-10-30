@@ -35,6 +35,6 @@ export const profile = {
   links: {
     email: 'pinarkarakoyun7@hotmail.com',
     github: 'https://github.com/pinarkarakoyun',
-    linkedin: 'https://www.linkedin.com/in/p%C4%B1nar-karakoyun',
+    linkedin: 'https://www.linkedin.com/in/pinar-karakoyun',
   },
 }

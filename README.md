@@ -53,4 +53,12 @@ npm install
 npm run dev      # http://localhost:5173
 npm run lint
 npm run build    # production build in dist/
+npm run cv       # regenerate the CV PDFs (needs Google Chrome)
 ```
+
+## CV
+
+`cv.html` is a printable one-page CV built from the same data files as the site (`src/data`), with short CV-specific texts in `src/data/cv.js`. `npm run cv` prints it to PDF with headless Chrome and checks that every PDF is exactly one page:
+
+- `public/cv/pinar-karakoyun-cv-{tr,en}.pdf`: public versions, downloadable from the site
+- `cv-private/…-basvuru.pdf`: application versions with phone number and reference, read from a local `cv.private.json` (see `cv.private.example.json`). Both are git-ignored and never published.

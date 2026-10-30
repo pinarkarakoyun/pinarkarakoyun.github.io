@@ -26,3 +26,7 @@ dist-ssr
 # Claude Code local config
 .claude/
 .playwright-mcp/
+
+# CV: kişisel bilgiler ve başvuru sürümü PDF'leri asla repoya girmez
+cv.private.json
+cv-private/

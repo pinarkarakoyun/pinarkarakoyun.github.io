@@ -1,0 +1,8 @@
+{
+  "phone": "0500 000 00 00",
+  "reference": {
+    "name": "Ad Soyad",
+    "title": { "tr": "Unvan, Şirket", "en": "Title, Company" },
+    "contact": "ad.soyad@example.com · 0500 000 00 00"
+  }
+}

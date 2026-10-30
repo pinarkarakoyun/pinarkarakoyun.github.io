@@ -75,7 +75,7 @@ export const experience = [
 
 export const education = [
   {
-    school: 'Antalya Bilim Üniversitesi',
+    school: { tr: 'Antalya Bilim Üniversitesi', en: 'Antalya Bilim University' },
     degree: { tr: 'Bilgisayar Mühendisliği', en: 'Computer Engineering' },
     period: { tr: '2022 – Devam ediyor', en: '2022 – Present' },
   },
