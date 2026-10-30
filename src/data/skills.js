@@ -18,6 +18,11 @@ export const skillGroups = [
     items: ['SQL Server', 'T-SQL', 'PostgreSQL', 'Azure Data Studio'],
   },
   {
+    id: 'embedded',
+    title: { tr: 'Gömülü Sistemler', en: 'Embedded Systems' },
+    items: ['8051', 'Embedded C', 'Keil uVision', 'Proteus'],
+  },
+  {
     id: 'automation',
     title: { tr: 'Süreç & Otomasyon', en: 'Process & Automation' },
     items: ['RPA', 'n8n', 'Paperwork BPM', 'SAP', 'eBA', 'Draw.io', 'Agile / Scrum'],

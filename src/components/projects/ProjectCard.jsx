@@ -8,7 +8,7 @@ import { StatusBadge } from './StatusBadge.jsx'
 // context, next, tech ve links.github isteğe bağlı; yoksa o kısım çizilmez.
 export function ProjectCard({ project }) {
   const { t } = useLanguage()
-  const { id, title, status, context, problem, solution, next, tech, links } = project
+  const { id, title, status, context, problem, solution, progress, next, tech, links } = project
 
   return (
     <article className="window project-card" aria-labelledby={`${id}-title`}>
@@ -26,6 +26,12 @@ export function ProjectCard({ project }) {
           <dd>{t(problem)}</dd>
           <dt>{t(ui.project.solution)}</dt>
           <dd>{t(solution)}</dd>
+          {progress && (
+            <>
+              <dt>{t(ui.project.progress)}</dt>
+              <dd>{t(progress)}</dd>
+            </>
+          )}
           {next && (
             <>
               <dt>{t(ui.project.next)}</dt>

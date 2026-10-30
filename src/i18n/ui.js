@@ -32,6 +32,7 @@ export const ui = {
   project: {
     problem: { tr: 'Problem', en: 'Problem' },
     solution: { tr: 'Çözüm', en: 'Solution' },
+    progress: { tr: 'Gelinen nokta', en: 'Progress' },
     next: { tr: 'Sırada', en: 'Next' },
     github: { tr: 'GitHub', en: 'GitHub' },
     tech: { tr: 'Kullanılan teknolojiler', en: 'Technologies used' },

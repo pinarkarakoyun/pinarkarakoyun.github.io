@@ -2,6 +2,7 @@
 // status: 'done' | 'prototype' | 'in-progress' | 'planning'
 //   Rozet metni ve rengi bu anahtardan üretilir (Adım 8).
 // context: projenin türü (staj, ekip, okul...). Gerekmiyorsa yazılmaz.
+// progress: devam eden projelerde şimdiye kadar yapılanlar. Gerekmiyorsa yazılmaz.
 // next: sıradaki hedef / yol haritası notu. Gerekmiyorsa yazılmaz.
 // links.github: repo yoksa null.
 
@@ -39,6 +40,10 @@ export const projects = [
       tr: 'Mobil öncelikli bir rezervasyon sistemi: her üyenin sabit bir grubu var, gelemediği dersi iptal edip telafi hakkı kazanıyor ve bu hakkı boş yeri olan başka bir derste kullanıyor. Stüdyo sahibi grupları, kontenjanı ve kuralları tek bir panelden yönetiyor.',
       en: 'A mobile-first booking system: every member has a fixed group, cancels a class they can’t attend to earn a make-up credit, and uses it in any other class with a free spot. The owner manages groups, capacity and rules from one admin panel.',
     },
+    progress: {
+      tr: 'Çalışan kısımlar: üye girişi, ders iptali ve telafi seçimi, yönetici paneli (bugünün dersleri, üyeler, gruplar, üyelik ve ödeme takibi, kurallar) ve tanıtım sayfası. Aynı son yere iki kişinin aynı anda yazılması veritabanı düzeyinde engelleniyor.',
+      en: 'Working so far: member login, cancelling and booking make-up classes, an admin panel (today’s classes, members, groups, memberships and payments, rules) and a landing page. Two people can never take the same last spot: booking is locked at the database level.',
+    },
     tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Docker'],
     links: { github: 'https://github.com/pinarkarakoyun/studio-booking' },
   },
@@ -74,25 +79,61 @@ export const projects = [
     links: { github: null },
   },
   {
-    id: 'campusmatch',
-    title: 'CampusMatch',
+    id: 'recampus',
+    title: 'RECAMPUS',
     status: 'planning',
-    context: { tr: 'Bitirme projesi · Ekip çalışması', en: 'Capstone project · Team project' },
+    context: { tr: 'Bitirme projesi · 4 kişilik ekip · Proje yönetimi', en: 'Capstone project · Team of 4 · Project management' },
     problem: {
-      tr: 'Öğrencinin akademik ve sosyal hayatı dağınık: sınav ve ödevler bir yerde, çalışma grubu bulmak WhatsApp gruplarında, arkadaş edinmek ise şansa kalmış.',
-      en: 'A student’s academic and social life is scattered: exams and assignments in one place, study groups in WhatsApp chats, and making friends is left to chance.',
+      tr: 'Öğrenciler dönem sonunda ders kitabı, lamba gibi eşyaları kullanmadan bırakıyor; ihtiyacı olan başka öğrenciler aynısını sıfırdan alıyor. Genel ikinci el sitelerinde öğrenciye özel güven, ders bazlı arama ve takas desteği yok.',
+      en: 'At the end of each term, students leave behind textbooks, lamps and other items, while other students buy the same things new. General second-hand sites offer no student-only trust, no course-based search and no swapping.',
     },
     solution: {
-      tr: 'Ajandayı ve ilgi profilini bir araya getiren bir kampüs platformu. Ajandaya bir sınav eklendiğinde aynı sınava giren ve müsait saatleri uyan öğrencilerle çalışma grubu öneriyor.',
-      en: 'A campus platform that combines a student’s planner with their interests. When an exam is added to the planner, it suggests a study group of classmates taking the same exam with matching free time.',
+      tr: 'Üniversite e-postasıyla doğrulanan öğrencilerin satış, takas, ücretsiz verme ve “aranıyor” ilanlarını tek bir yapıda paylaştığı bir kampüs pazar yeri. Yeniden kullanılan, takas edilen ve verilen ürün sayısı, gerçek platform verisinden hesaplanan sürdürülebilirlik sayaçlarıyla gösteriliyor.',
+      en: 'A campus marketplace where students verified by their university email post sell, swap, give-away and “wanted” listings in a single structure. Sustainability counters show how many items were reused, swapped or given away, calculated from real platform data.',
+    },
+    progress: {
+      tr: 'Proje raporunu ve yol haritasını hazırladım: kapsam kuralları, Must / Should / Nice öncelikleri ve iki dönemlik özellik planı. Geliştirme bu planla başlayacak.',
+      en: 'I prepared the project report and roadmap: scope rules, Must / Should / Nice priorities and a two-term feature plan. Development will start from this plan.',
     },
     tech: [],
     links: { github: null },
   },
   {
+    id: '8051-led-matrix',
+    title: '8051 Scrolling LED Matrix',
+    status: 'done',
+    context: { tr: 'Ders projesi · Mikroişlemciler', en: 'Course project · Microprocessors' },
+    problem: {
+      tr: 'Sadece 3 mikrodenetleyici pini kullanarak 32 sütunluk bir LED ekranda kayan yazı göstermek ve bunu butonlarla kontrol etmek.',
+      en: 'Show scrolling text on a 32-column LED display using only 3 microcontroller pins, and control it with buttons.',
+    },
+    solution: {
+      tr: 'AT89C51 (8051) üzerinde, zincirleme bağlı dört 74HC595 kaydırma yazmacıyla dört 8x8 LED matrisi süren bir kayan yazı panosu. Bir buton yazıyı durdurup başlatıyor, diğeri üç hız arasında geçiş yapıyor; her şey kesmelerle (interrupt) çalışıyor.',
+      en: 'A scrolling message board on an AT89C51 (8051) driving four 8x8 LED matrices through four daisy-chained 74HC595 shift registers. One button pauses and resumes, the other cycles three speeds; everything runs on interrupts.',
+    },
+    tech: ['C', '8051', 'Keil uVision', 'Proteus', 'Interrupts'],
+    links: { github: 'https://github.com/pinarkarakoyun/8051-scrolling-led-matrix' },
+  },
+  {
+    id: 'java-oop-projects',
+    title: 'Java OOP Projects',
+    status: 'done',
+    context: { tr: 'Ders projeleri · Nesne yönelimli programlama', en: 'Coursework · Object-oriented programming' },
+    problem: {
+      tr: 'Nesne yönelimli programlamanın temel fikirlerini (kalıtım, çok biçimlilik, olay yönetimi) küçük ama çalışan programlarla pekiştirmek.',
+      en: 'Practise the core ideas of object-oriented programming (inheritance, polymorphism, event handling) with small but working programs.',
+    },
+    solution: {
+      tr: 'Üç bağımsız program: ondalık, ikilik ve onaltılık modlu, bit işlemleri yapabilen Swing arayüzlü bir programcı hesap makinesi; bilgisayara karşı konsol Tic-Tac-Toe; ve kitap, roman, dergi gibi okuma materyallerinden oluşan bir sınıf hiyerarşisi.',
+      en: 'Three standalone programs: a Swing programmer calculator with decimal, binary and hexadecimal modes and bitwise operations; console Tic-Tac-Toe against the computer; and a class hierarchy of reading materials such as books, novels and magazines.',
+    },
+    tech: ['Java', 'Swing', 'OOP'],
+    links: { github: 'https://github.com/pinarkarakoyun/java-oop-projects' },
+  },
+  {
     id: 'high-low-card-game',
     title: 'High-Low Card Game',
-    status: 'done',
+    status: 'in-progress',
     context: { tr: 'Okul projesi', en: 'School project' },
     problem: {
       tr: 'Nesne yönelimli programlamayı gerçekten anlamak için kuralları ve durumu olan küçük ama eksiksiz bir uygulama yazmak istedim.',
@@ -101,6 +142,10 @@ export const projects = [
     solution: {
       tr: 'Kart, deste ve el sınıflarıyla modellenmiş, Swing arayüzlü bir "büyük mü küçük mü" kart oyunu.',
       en: 'A "higher or lower" card game with a Swing interface, modeled with Card, Deck and Hand classes.',
+    },
+    next: {
+      tr: 'Oyunu tamamlayıp kendi reposunda GitHub’a yüklemek.',
+      en: 'Finish the game and publish it in its own GitHub repository.',
     },
     tech: ['Java', 'Swing', 'OOP'],
     links: { github: null },
