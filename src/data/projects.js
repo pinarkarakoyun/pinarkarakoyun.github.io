@@ -5,6 +5,7 @@
 // progress: devam eden projelerde şimdiye kadar yapılanlar. Gerekmiyorsa yazılmaz.
 // next: sıradaki hedef / yol haritası notu. Gerekmiyorsa yazılmaz.
 // links.github: repo yoksa null.
+// image: kartın üstündeki ekran görüntüsü (public/projects altında, 960x600). Gerekmiyorsa yazılmaz.
 
 export const projects = [
   {
@@ -25,6 +26,13 @@ export const projects = [
       tr: 'Tanıtım sitesiyle birlikte yakında yayında. Sonraki hedef: günlük, haftalık ve aylık sipariş istatistikleri.',
       en: 'Going live soon together with the shop website. Next goal: daily, weekly and monthly order statistics.',
     },
+    image: {
+      src: 'projects/mustan-tailoring.jpg',
+      alt: {
+        tr: 'İki ekran: Mustan Tailoring tanıtım sitesinin ana sayfası ve “teslime hazır” durumundaki bir siparişin müşteri takip sayfası',
+        en: 'Two screens: the Mustan Tailoring home page and the customer tracking page of an order that is ready for pickup',
+      },
+    },
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'next-intl', 'QR'],
     links: { github: 'https://github.com/pinarkarakoyun/mustan-tailoring' },
   },
@@ -44,6 +52,10 @@ export const projects = [
       tr: 'Çalışan kısımlar: üye girişi, ders iptali ve telafi seçimi, yönetici paneli (bugünün dersleri, üyeler, gruplar, üyelik ve ödeme takibi, kurallar) ve tanıtım sayfası. Aynı son yere iki kişinin aynı anda yazılması veritabanı düzeyinde engelleniyor.',
       en: 'Working so far: member login, cancelling and booking make-up classes, an admin panel (today’s classes, members, groups, memberships and payments, rules) and a landing page. Two people can never take the same last spot: booking is locked at the database level.',
     },
+    image: {
+      src: 'projects/studio-booking.jpg',
+      alt: { tr: 'İki telefon ekranı: üyenin sıradaki dersi ve yöneticinin bugünkü dersleri', en: "Two phone screens: a member's next class and the admin's classes for today" },
+    },
     tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Docker'],
     links: { github: 'https://github.com/pinarkarakoyun/studio-booking' },
   },
@@ -58,6 +70,10 @@ export const projects = [
     solution: {
       tr: 'Kullanıcı girişi olan bir web uygulaması: işlemler kategorilere ayrılıyor, filtrelenip aranabiliyor, aylık özet ve harcama grafiği gösteriliyor. Tarayıcıdan REST API’ye ve veritabanına kadar bütün zinciri kendim kurdum.',
       en: 'A web app with user accounts: transactions are grouped into categories, can be filtered and searched, and a monthly summary with a spending chart is shown. I built the whole chain myself, from the browser to the REST API and the database.',
+    },
+    image: {
+      src: 'projects/personal-finance-tracker.jpg',
+      alt: { tr: 'Aylık gelir, gider ve kalan tutarı ile harcama grafiğini gösteren panel', en: "Dashboard with monthly income, expenses, balance and a spending chart" },
     },
     tech: ['JavaScript', 'Node.js', 'Express', 'SQL Server', 'JWT', 'Chart.js', 'Docker'],
     links: { github: 'https://github.com/pinarkarakoyun/personal-finance-tracker' },

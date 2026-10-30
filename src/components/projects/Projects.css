@@ -10,6 +10,17 @@
   flex-direction: column;
 }
 
+/* Ekran görüntüsü: başlık çubuğunun hemen altında, 16:10 */
+.project-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: var(--border-width) solid var(--color-border);
+  image-rendering: auto; /* fotoğraflar piksel kuralından muaf: bulanık değil yumuşak ölçeklensin */
+}
+
 .project-card__body {
   display: flex;
   flex-direction: column;

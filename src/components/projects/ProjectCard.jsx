@@ -8,11 +8,24 @@ import { StatusBadge } from './StatusBadge.jsx'
 // context, next, tech ve links.github isteğe bağlı; yoksa o kısım çizilmez.
 export function ProjectCard({ project }) {
   const { t } = useLanguage()
-  const { id, title, status, context, problem, solution, progress, next, tech, links } = project
+  const { id, title, status, context, problem, solution, progress, next, tech, links, image } = project
 
   return (
     <article className="window project-card" aria-labelledby={`${id}-title`}>
       <WindowTitle>{id}.exe</WindowTitle>
+
+      {image && (
+        <img
+          className="project-card__image"
+          // BASE_URL: site bir alt klasörde yayınlansa da görsel yolu doğru kalsın
+          src={`${import.meta.env.BASE_URL}${image.src}`}
+          alt={t(image.alt)}
+          width="960"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        />
+      )}
 
       <div className="window__body project-card__body">
         <header className="project-card__header">
