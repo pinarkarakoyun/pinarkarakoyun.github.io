@@ -12,13 +12,13 @@ export const cv = {
     'Talya Bilişim · Elektraweb': {
       tr: [
         'TÜBİTAK 1501 destekli Talya QMS-AI projesinin (otellerde yapay zekâ ile kalite riski tahmini) ekibinde yer alıyorum.',
-        'Elektra QM kalite yönetim sistemi için modül modül kullanıcı kılavuzu hazırladım.',
-        'Elektraweb için rakip ve pazar analizi raporu hazırladım.',
+        'Elektra QM’in yeni doküman yönetim sistemine (DYS) yazılım tarafında eklemeler ve düzenlemeler yapıyor, yeni ekranları test ediyorum.',
+        'Elektra QM için kullanıcı kılavuzu ve Elektraweb için rakip ve pazar analizi raporu hazırladım.',
       ],
       en: [
         'Team member on Talya QMS-AI, a TÜBİTAK 1501-funded project that uses AI to predict quality risks in hotels.',
-        'Wrote a module-by-module user guide for the Elektra QM quality management system.',
-        'Prepared a competitor and market analysis report for Elektraweb.',
+        'Developing software additions and changes for Elektra QM’s new document management system and testing its new screens.',
+        'Wrote a user guide for Elektra QM and a competitor and market analysis report for Elektraweb.',
       ],
     },
     'ANKUTSAN A.Ş.': {

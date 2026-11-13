@@ -13,15 +13,15 @@ export const experience = [
     highlights: {
       tr: [
         'TÜBİTAK 1501 Sanayi Ar-Ge programından destek alan Talya QMS-AI projesinin ekibinde stajyer olarak yer alıyorum. Proje, otellerdeki kalite sorunlarının kök nedenlerini yapay zekâ ile bulup risklere karşı erken uyarı vermeyi hedefliyor.',
-        'Elektra QM (kalite yönetimi) sistemi için modül modül kullanıcı kılavuzu hazırladım; insan kaynakları, doküman yönetimi gibi ekranların nasıl kullanılacağını adım adım anlattım.',
-        'Elektraweb için rakip ve pazar analizi raporu hazırladım.',
-        'QM sistemi üzerindeki çalışmalarıma devam ediyorum.',
+        'Elektra QM’in yeni doküman yönetim sistemine (DYS) yazılım tarafında eklemeler ve düzenlemeler yapıyorum.',
+        'Sistemin yeni ekranlarını test ediyorum.',
+        'Elektra QM için modül modül kullanıcı kılavuzu ve Elektraweb için rakip ve pazar analizi raporu hazırladım.',
       ],
       en: [
         'Part of the team, as an intern, on Talya QMS-AI, a project funded by TÜBİTAK’s 1501 Industrial R&D program. It uses AI to find root causes of quality issues in hotels and give early warnings about risks.',
-        'Wrote a module-by-module user guide for the Elektra QM (quality management) system, explaining step by step how to use screens such as human resources and document management.',
-        'Prepared a competitor and market analysis report for Elektraweb.',
-        'Continuing my work on the QM system.',
+        'Developing additions and changes on the software side of Elektra QM’s new document management system.',
+        'Testing the system’s new screens.',
+        'Wrote a module-by-module user guide for Elektra QM and a competitor and market analysis report for Elektraweb.',
       ],
     },
   },

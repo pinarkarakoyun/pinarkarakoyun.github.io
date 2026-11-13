@@ -13,12 +13,12 @@ export const profile = {
   },
   about: {
     tr: [
-      'Antalya Bilim Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Projelerimin çoğu çevremde gördüğüm bir sorundan doğuyor: dayımın terzi dükkânındaki sipariş karmaşası, WhatsApp üzerinden ayarlanan pilates dersleri, takip edilemeyen harcamalar.',
+      'Antalya Bilim Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Projelerimin çoğu çevremde gördüğüm bir sorundan doğuyor.',
       'Stajlarımda kurumsal uygulamalar, chatbot geliştirme, iş süreçleri analizi ve süreç otomasyonu (RPA, SAP) üzerine çalıştım. Şu anda Elektraweb’de kalite yönetimi sistemi üzerinde staj yapıyorum. Teknik bilgimi gerçek iş süreçleriyle birleştirmeyi seviyorum.',
       'Henüz tek bir alana kapanmadım; web, mobil ve yapay zekânın günlük hayatta kullanımı ilgimi çekiyor. Her projede biraz daha büyüyerek istikrarlı şekilde üretmeye devam ediyorum.',
     ],
     en: [
-      "I'm a senior Computer Engineering student at Antalya Bilim University. Most of my projects start with a problem I notice around me: the order chaos at my uncle's tailoring shop, Pilates classes booked over WhatsApp, expenses nobody can keep track of.",
+      "I'm a senior Computer Engineering student at Antalya Bilim University. Most of my projects start with a problem I notice around me.",
       "During my internships I worked on enterprise applications, chatbot development, business process analysis and process automation (RPA, SAP). I'm currently interning at Elektraweb, working on their quality management system. I enjoy connecting technical skills with real business processes.",
       "I haven't locked myself into a single field yet; web, mobile and using AI in everyday life all interest me. I keep building steadily and grow a little with every project.",
     ],
@@ -29,9 +29,7 @@ export const profile = {
     { icon: 'pin', label: { tr: 'Konum', en: 'Location' }, value: { tr: 'Antalya, Türkiye', en: 'Antalya, Türkiye' } },
     { icon: 'cap', label: { tr: 'Okul', en: 'School' }, value: { tr: 'Antalya Bilim Üniversitesi', en: 'Antalya Bilim University' } },
     { icon: 'star', label: { tr: 'Seviye', en: 'Level' }, value: { tr: '4. sınıf', en: 'Senior (4th year)' } },
-    { icon: 'sword', label: { tr: 'Şu an', en: 'Current quest' }, value: { tr: 'Elektraweb stajyeri', en: 'Intern at Elektraweb' } },
-    { icon: 'cup', label: { tr: 'Yakıt', en: 'Fuel' }, value: { tr: 'Kahve', en: 'Coffee' } },
-  ],
+    { icon: 'sword', label: { tr: 'Şu an', en: 'Current quest' }, value: { tr: 'Elektraweb stajyeri', en: 'Intern at Elektraweb' } },  ],
   links: {
     email: 'pinarkarakoyun7@hotmail.com',
     github: 'https://github.com/pinarkarakoyun',
