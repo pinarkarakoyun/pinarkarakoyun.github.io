@@ -6,11 +6,13 @@ import { Hero } from './components/Hero.jsx'
 import { Navbar } from './components/Navbar.jsx'
 import { Projects } from './components/projects/Projects.jsx'
 import { Skills } from './components/skills/Skills.jsx'
+import { useScrollReveal } from './hooks/useScrollReveal.js'
 import { useLanguage } from './i18n/useLanguage.js'
 import { ui } from './i18n/ui.js'
 
 function App() {
   const { t } = useLanguage()
+  useScrollReveal()
 
   return (
     <>

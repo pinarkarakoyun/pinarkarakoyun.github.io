@@ -83,6 +83,20 @@ main:focus {
   color: var(--color-on-accent);
 }
 
+/* Kaydırınca belirme: useScrollReveal ekler. steps(5) = yumuşak değil, piksel oyunu gibi kademeli */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.5s steps(5) var(--reveal-delay, 0ms),
+    transform 0.5s steps(5) var(--reveal-delay, 0ms);
+}
+
 /* Hareket hassasiyeti olanlar için animasyonları kapat */
 @media (prefers-reduced-motion: reduce) {
   *,
