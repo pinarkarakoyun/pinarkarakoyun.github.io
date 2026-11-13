@@ -219,3 +219,28 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Telefonda sekmeler tek satır: sığmayanlar parmakla yana kaydırılır */
+@media (max-width: 600px) {
+  .project-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none; /* Firefox */
+    /* Piksel gölge ve "basılı" kayma kesilmesin diye altta/sağda pay */
+    /* Sağdaki pay solma genişliğiyle aynı: sona kaydırınca son sekme solmaz */
+    padding: 0 2.5rem 6px 0;
+    /* Sağ kenarda solma: devamı olduğunu ima eder */
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+  }
+
+  .project-filters::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
+  }
+
+  .project-filters__tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+}

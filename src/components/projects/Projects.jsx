@@ -28,7 +28,11 @@ export function Projects() {
             type="button"
             className="project-filters__tab"
             aria-pressed={filter === key}
-            onClick={() => setFilter(key)}
+            onClick={(event) => {
+              setFilter(key)
+              // Mobilde yarısı görünen sekmeye basılınca tamamı görünür olsun
+              event.currentTarget.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+            }}
           >
             {t(ui.filters[key])}
             <span className="project-filters__count">{projects.filter((project) => matches(project, key)).length}</span>
