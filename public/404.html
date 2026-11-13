@@ -1,0 +1,171 @@
+<!doctype html>
+<!--
+  GitHub Pages, bulunamayan her adreste bu sayfayı gösterir.
+  React'e bağlı değil: tek dosya, hızlı açılır. Kedi, src/components/cat/catSprites.js'teki
+  oturan karenin (sitA) SVG hâli. Metin tarayıcı diline göre TR ya da EN seçilir.
+-->
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+    <title>404 · Pınar Karakoyun</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        color: #f4edef;
+        font-family: 'VT323', monospace;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #2b193d;
+        background-image:
+          radial-gradient(rgb(244 237 239 / 0.35) 1px, transparent 1px),
+          radial-gradient(rgb(244 237 239 / 0.35) 1px, transparent 1px);
+        background-size: 48px 48px, 80px 80px;
+        background-position: 0 0, 24px 40px;
+      }
+
+      .window {
+        width: min(520px, 100%);
+        background: #2c365e;
+        border: 3px solid #0f0918;
+        box-shadow: 6px 6px 0 #0f0918;
+      }
+
+      .titlebar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        font-family: 'Press Start 2P', monospace;
+        font-size: 0.625rem;
+        text-align: left;
+        background: #484d6d;
+        border-bottom: 3px solid #0f0918;
+      }
+
+      .controls {
+        display: flex;
+        gap: 4px;
+      }
+
+      .controls span {
+        width: 12px;
+        height: 12px;
+        background: #2c365e;
+        border: 2px solid #0f0918;
+      }
+
+      .body {
+        padding: 2rem 1.5rem 1.75rem;
+      }
+
+      h1 {
+        margin: 0 0 1rem;
+        font-family: 'Press Start 2P', monospace;
+        font-size: clamp(1.5rem, 7vw, 2.25rem);
+        font-weight: 400;
+        color: #6ee7b7;
+        animation: blink 1.2s steps(1) infinite;
+      }
+
+      .code {
+        margin: 0 0 1.5rem;
+        font-family: 'Press Start 2P', monospace;
+        font-size: 0.75rem;
+        color: #c5979d;
+      }
+
+      .cat {
+        display: block;
+        width: 136px;
+        height: auto;
+        margin: 0 auto 1.25rem;
+        image-rendering: pixelated;
+      }
+
+      p {
+        margin: 0 0 1.5rem;
+        line-height: 1.3;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.85rem 1.1rem;
+        font-family: 'Press Start 2P', monospace;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        color: #2b193d;
+        text-decoration: none;
+        background: #6ee7b7;
+        border: 3px solid #0f0918;
+        box-shadow: 4px 4px 0 #0f0918;
+      }
+
+      a:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 #0f0918;
+      }
+
+      a:focus-visible {
+        outline: 3px dashed #6ee7b7;
+        outline-offset: 4px;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0.35;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        h1 {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="window">
+      <div class="titlebar">
+        error.exe
+        <span class="controls" aria-hidden="true"><span></span><span></span></span>
+      </div>
+      <div class="body">
+        <h1>GAME OVER</h1>
+        <p class="code">ERROR 404</p>
+        <svg class="cat" viewBox="0 0 17 12" shape-rendering="crispEdges" aria-hidden="true"><rect x="10" y="0" width="1" height="1" fill="#2b193d"/><rect x="14" y="0" width="1" height="1" fill="#2b193d"/><rect x="9" y="1" width="1" height="1" fill="#2b193d"/><rect x="10" y="1" width="1" height="1" fill="#9a9aab"/><rect x="11" y="1" width="3" height="1" fill="#2b193d"/><rect x="14" y="1" width="1" height="1" fill="#9a9aab"/><rect x="15" y="1" width="1" height="1" fill="#2b193d"/><rect x="9" y="2" width="1" height="1" fill="#2b193d"/><rect x="10" y="2" width="1" height="1" fill="#f4a6b8"/><rect x="11" y="2" width="3" height="1" fill="#9a9aab"/><rect x="14" y="2" width="1" height="1" fill="#f4a6b8"/><rect x="15" y="2" width="1" height="1" fill="#2b193d"/><rect x="9" y="3" width="1" height="1" fill="#2b193d"/><rect x="10" y="3" width="5" height="1" fill="#9a9aab"/><rect x="15" y="3" width="1" height="1" fill="#2b193d"/><rect x="6" y="4" width="4" height="1" fill="#2b193d"/><rect x="10" y="4" width="3" height="1" fill="#9a9aab"/><rect x="13" y="4" width="1" height="1" fill="#2b193d"/><rect x="14" y="4" width="1" height="1" fill="#9a9aab"/><rect x="15" y="4" width="1" height="1" fill="#2b193d"/><rect x="5" y="5" width="1" height="1" fill="#2b193d"/><rect x="6" y="5" width="9" height="1" fill="#9a9aab"/><rect x="15" y="5" width="1" height="1" fill="#f4a6b8"/><rect x="16" y="5" width="1" height="1" fill="#2b193d"/><rect x="5" y="6" width="1" height="1" fill="#2b193d"/><rect x="6" y="6" width="6" height="1" fill="#9a9aab"/><rect x="12" y="6" width="2" height="1" fill="#c4c4d2"/><rect x="14" y="6" width="1" height="1" fill="#9a9aab"/><rect x="15" y="6" width="1" height="1" fill="#2b193d"/><rect x="4" y="7" width="1" height="1" fill="#2b193d"/><rect x="5" y="7" width="3" height="1" fill="#9a9aab"/><rect x="8" y="7" width="3" height="1" fill="#c4c4d2"/><rect x="11" y="7" width="1" height="1" fill="#9a9aab"/><rect x="12" y="7" width="3" height="1" fill="#2b193d"/><rect x="1" y="8" width="1" height="1" fill="#2b193d"/><rect x="4" y="8" width="1" height="1" fill="#2b193d"/><rect x="5" y="8" width="3" height="1" fill="#9a9aab"/><rect x="8" y="8" width="3" height="1" fill="#c4c4d2"/><rect x="11" y="8" width="1" height="1" fill="#9a9aab"/><rect x="12" y="8" width="1" height="1" fill="#2b193d"/><rect x="0" y="9" width="1" height="1" fill="#2b193d"/><rect x="1" y="9" width="1" height="1" fill="#9a9aab"/><rect x="2" y="9" width="3" height="1" fill="#2b193d"/><rect x="5" y="9" width="3" height="1" fill="#9a9aab"/><rect x="8" y="9" width="3" height="1" fill="#c4c4d2"/><rect x="11" y="9" width="1" height="1" fill="#9a9aab"/><rect x="12" y="9" width="1" height="1" fill="#2b193d"/><rect x="1" y="10" width="1" height="1" fill="#2b193d"/><rect x="2" y="10" width="6" height="1" fill="#9a9aab"/><rect x="8" y="10" width="3" height="1" fill="#c4c4d2"/><rect x="11" y="10" width="1" height="1" fill="#9a9aab"/><rect x="12" y="10" width="1" height="1" fill="#2b193d"/><rect x="2" y="11" width="10" height="1" fill="#2b193d"/></svg>
+        <p data-tr="Aradığın sayfa bu dünyada yok. Belki adres yanlış yazıldı ya da sayfa taşındı."
+           data-en="The page you are looking for does not exist in this world. The address may be mistyped, or the page has moved.">
+          Aradığın sayfa bu dünyada yok. Belki adres yanlış yazıldı ya da sayfa taşındı.
+        </p>
+        <a href="/" data-tr="▶ Ana menüye dön" data-en="▶ Back to main menu">▶ Ana menüye dön</a>
+      </div>
+    </main>
+    <script>
+      // Sitede seçilmiş dil varsa onu, yoksa tarayıcı dilini kullan (TR değilse EN)
+      let lang = 'en'
+      try {
+        const saved = localStorage.getItem('portfolio-lang')
+        if (saved === 'tr' || saved === 'en') lang = saved
+        else if (navigator.languages.some((code) => code.toLowerCase().startsWith('tr'))) lang = 'tr'
+      } catch {
+        if (navigator.language.toLowerCase().startsWith('tr')) lang = 'tr'
+      }
+      document.documentElement.lang = lang
+      for (const element of document.querySelectorAll('[data-tr]')) element.textContent = element.dataset[lang]
+    </script>
+  </body>
+</html>
