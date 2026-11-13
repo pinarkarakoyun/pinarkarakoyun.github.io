@@ -55,6 +55,13 @@ export const cv = {
       },
     },
     {
+      id: 'dryclean-order-tracking',
+      line: {
+        tr: 'Antalya’da bir kuru temizlemeci için parça bazında sipariş takibi: her parçaya etiket numarası, müşteriye hesapsız QR linkle takip, değiştirilemez durum geçmişi.',
+        en: 'Per-garment order tracking for a dry cleaner in Antalya: a tag number for every garment, account-free QR link tracking for customers, and an append-only status history.',
+      },
+    },
+    {
       id: 'studio-booking',
       line: {
         tr: 'Pilates stüdyoları için mobil öncelikli rezervasyon ve telafi dersi sistemi; yönetici paneli, üyelik ve ödeme takibi, veritabanı düzeyinde çifte rezervasyon koruması, ~130 test.',
@@ -73,13 +80,6 @@ export const cv = {
       line: {
         tr: 'Bitirme projesi, 4 kişilik ekipte proje yöneticisi: üniversite e-postasıyla doğrulanan öğrenciler için ikinci el, takas ve ücretsiz verme pazar yeri. Rapor ve yol haritasını hazırladım.',
         en: 'Capstone project, project manager in a team of four: a second-hand, swap and give-away marketplace for students verified by university email. I prepared the report and roadmap.',
-      },
-    },
-    {
-      id: '8051-led-matrix',
-      line: {
-        tr: '8051 mikrodenetleyici ile 74HC595 kaydırma yazmaçları üzerinden dört 8x8 LED matriste kesme tabanlı kayan yazı panosu.',
-        en: 'Interrupt-driven scrolling message board on an 8051 microcontroller, driving four 8x8 LED matrices through 74HC595 shift registers.',
       },
     },
   ],
