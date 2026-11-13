@@ -1,0 +1,77 @@
+/* Bildirimin yeri: sağ alt köşe (mobilde altta ortada) */
+.achievement-region {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 50;
+  pointer-events: none;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 280px;
+  padding: 0.75rem 1rem;
+  background: var(--palette-midnight-violet);
+  color: #f4edef;
+  border: var(--border-width) solid var(--palette-neon-mint);
+  box-shadow: var(--shadow-pixel);
+  /* steps(): piksel piksel aşağıdan kayar */
+  animation: achievement-in 0.4s steps(4) both;
+}
+
+.achievement__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  color: var(--palette-gold);
+  background: var(--palette-twilight-indigo);
+  border: 2px solid var(--palette-neon-mint);
+}
+
+.achievement__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.achievement__label {
+  font-family: var(--font-heading);
+  font-size: 0.5625rem;
+  color: var(--palette-neon-mint);
+}
+
+.achievement__title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+}
+
+.achievement__detail {
+  font-size: 1.125rem;
+  line-height: 1;
+  color: var(--palette-rosy-taupe);
+}
+
+@keyframes achievement-in {
+  from {
+    transform: translateY(120%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .achievement-region {
+    right: var(--space-sm);
+    left: var(--space-sm);
+    bottom: var(--space-sm);
+  }
+
+  .achievement {
+    min-width: 0;
+  }
+}

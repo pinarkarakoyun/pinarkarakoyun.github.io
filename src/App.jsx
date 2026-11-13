@@ -1,4 +1,5 @@
 import { About } from './components/About.jsx'
+import { Achievement } from './components/Achievement.jsx'
 import { Contact } from './components/contact/Contact.jsx'
 import { Footer } from './components/contact/Footer.jsx'
 import { Experience } from './components/experience/Experience.jsx'
@@ -30,6 +31,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Achievement />
     </>
   )
 }

@@ -81,6 +81,10 @@ export const ui = {
     copied: { tr: 'Kopyalandı!', en: 'Copied!' },
     copyFailed: { tr: 'Kopyalanamadı, adresi elle seçebilirsin.', en: "Couldn't copy. You can select the address by hand." },
   },
+  achievement: {
+    unlocked: { tr: 'Başarım açıldı', en: 'Achievement unlocked' },
+    detail: { tr: '1/1 gizli sır bulundu', en: '1/1 secrets found' },
+  },
   cv: {
     download: { tr: 'CV indir', en: 'Download CV' },
   },
