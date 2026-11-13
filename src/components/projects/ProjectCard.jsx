@@ -29,7 +29,7 @@ export function ProjectCard({ project }) {
 
       <div className="window__body project-card__body">
         <header className="project-card__header">
-          <h3 id={`${id}-title`}>{title}</h3>
+          <h3 id={`${id}-title`}>{t(title)}</h3>
           <StatusBadge status={status} />
         </header>
         {context && <p className="project-card__context">{t(context)}</p>}
@@ -65,7 +65,7 @@ export function ProjectCard({ project }) {
             <a className="pixel-button project-card__link" href={links.github} target="_blank" rel="noreferrer">
               <PixelIcon name="github" size={16} />
               {t(ui.project.github)}
-              <span className="visually-hidden">: {title}</span>
+              <span className="visually-hidden">: {t(title)}</span>
             </a>
           )}
         </footer>

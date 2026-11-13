@@ -1,4 +1,5 @@
 // Projeler: her biri "Problem → Çözüm" kartı olarak gösterilir.
+// title: düz metin ya da iki dilli { tr, en }.
 // status: 'done' | 'prototype' | 'in-progress' | 'planning'
 //   Rozet metni ve rengi bu anahtardan üretilir (Adım 8).
 // context: projenin türü (staj, ekip, okul...). Gerekmiyorsa yazılmaz.
@@ -35,6 +36,26 @@ export const projects = [
     },
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'next-intl', 'QR'],
     links: { github: 'https://github.com/pinarkarakoyun/mustan-tailoring' },
+  },
+  {
+    id: 'dryclean-order-tracking',
+    title: { tr: 'Kuru Temizleme Sipariş Takip', en: 'Dry Cleaning Order Tracking' },
+    status: 'prototype',
+    context: { tr: 'Yerel işletme · Antalya', en: 'Local business · Antalya' },
+    problem: {
+      tr: 'Kuru temizlemede tek bir siparişte birden fazla parça oluyor ve her parça farklı zamanda hazır olabiliyor. Kâğıt fişle hangi parçanın hangi aşamada olduğunu takip etmek zor.',
+      en: 'A single dry-cleaning order often has several garments, and each can be ready at a different time. With paper slips it is hard to know which garment is at which stage.',
+    },
+    solution: {
+      tr: 'Her parçanın kendi etiket numarası (örn. 1048-1) ve durumu olan bir sipariş takip sistemi. Müşteri hesap açmadan, QR kodlu gizli bir linkle siparişini izliyor. Durum geçmişi veritabanında değiştirilemiyor (append-only), yanlış bir değişiklik birkaç saniye içinde geri alınabiliyor.',
+      en: 'An order tracking system where every garment has its own tag number (e.g. 1048-1) and status. Customers follow their order through a secret QR link, without an account. The status history cannot be altered in the database (append-only), and a wrong change can be undone within seconds.',
+    },
+    progress: {
+      tr: 'Yönetici paneli, müşteri ve ürün yönetimi ile hızlı fiyat butonları çalışıyor. Supabase üzerinde demo verisiyle çalışan bir prototip. Sırada parça fotoğrafı yükleme ve KVKK hazırlığı var.',
+      en: 'The admin panel, customer and product management and quick price buttons work. A prototype on Supabase with demo data. Next: garment photo uploads and KVKK (data protection) preparation.',
+    },
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
+    links: { github: 'https://github.com/pinarkarakoyun/dryclean-order-tracking' },
   },
   {
     id: 'studio-booking',

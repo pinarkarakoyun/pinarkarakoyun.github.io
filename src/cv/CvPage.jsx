@@ -83,7 +83,7 @@ export function CvPage({ lang, privateInfo }) {
           return (
             <article className="cv__project" key={id}>
               <p>
-                <strong>{project.title}</strong>
+                <strong>{t(project.title)}</strong>
                 {project.tech.length > 0 && <span className="cv__tech"> ({project.tech.slice(0, 4).join(', ')})</span>}
                 {' — '}
                 {t(line)}
