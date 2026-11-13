@@ -1,0 +1,10 @@
+/* Avatarın üstüne yüzdeyle konumlanan hareketli katmanlar (buhar, göz kırpma) */
+.avatar-layer {
+  position: absolute;
+  pointer-events: none; /* altındaki kediye tıklamayı engellemesin */
+}
+
+.avatar-layer svg {
+  width: 100%;
+  height: auto;
+}

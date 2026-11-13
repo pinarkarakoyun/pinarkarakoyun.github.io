@@ -2,6 +2,7 @@ import { profile } from '../data/profile.js'
 import { useLanguage } from '../i18n/useLanguage.js'
 import { ui } from '../i18n/ui.js'
 import { Avatar } from './avatar/Avatar.jsx'
+import { AvatarAnimations } from './avatar/AvatarAnimations.jsx'
 import { WalkingCat } from './cat/WalkingCat.jsx'
 import { CvDownloadLink } from './CvDownloadLink.jsx'
 import { TypewriterText } from './TypewriterText.jsx'
@@ -37,6 +38,7 @@ export function Hero() {
         <div className="hero__avatar-body">
           <div className="hero__scene">
             <Avatar title={t(ui.hero.avatarAlt)} />
+            <AvatarAnimations />
             <WalkingCat />
           </div>
         </div>

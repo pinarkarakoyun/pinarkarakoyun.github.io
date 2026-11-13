@@ -1,5 +1,5 @@
 // Pınar'ın piksel art avatarı: 64x80 ızgara, chibi oranlar (GitHub profil resmindeki gibi),
-// masada laptop ve kahve.
+// masada laptop ve kahve. Hareketli kısımlar (buhar, göz kırpma) avatarLayers.js'te.
 // Her satır bir dize, her karakter bir piksel. Karakterin rengi aşağıdaki palette'te.
 // Bir pikseli değiştirmek için sadece o karakteri değiştir, başka bir şeye dokunmana gerek yok.
 
@@ -28,12 +28,10 @@ export const palette = {
   C: '#6b3a1c', // ayçiçeği göbeği
   O: '#f29e4c', // güneş çıkartması
   N: '#2fa77a', // </> çıkartması
-  P: '#ff8fb8', // kalp çıkartması / kedinin burnu
-  w: '#a3a3b5', // kedi çıkartması (gri)
+  P: '#ff8fb8', // kalp çıkartması
   A: '#4b8f8c', // kupa (Dark Cyan)
   a: '#356a68', // kupa gölgesi
   D: '#5a3420', // kahve
-  V: '#e4def0', // buhar
 }
 
 export const pixels = [
@@ -90,19 +88,19 @@ export const pixels = [
   '......KLLHHHHLLHKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKLLHHHHLK.......',
   '.......KHhHHLHHhKGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGgKHHhHHLHHK......',
   '.......KHHHHLHHHKGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGgKHHHHHLHHK......',
-  '........KHHHHhhHKGGGGYGYGGGGGGGGGGGGGGOGOGOGGGGgKhhHHHHhVHK.....',
-  '.......KHHHHHHHHKGGGYYYYYGGGGGNGGGNGGGGOOOGGGGGgKHHHVHHVHK......',
-  '.......KHHLLHHHHKGGGGYCYGGGGGNGGNGGNGGOOOOOGGGGgKHHHLVHHV.......',
-  '......KHHLHHhHHLKGGGYYYYYGGGNGGGNGGGNGGOOOGGGGGgKHHLVHhV........',
-  '.......KHLHHHHHLKGGGGYGYGGGGGNGNGGGNGGOGOGOGGGGgKHHLHVHHV.......',
-  '.......KHHhhHHHHKGGGGGGGGGGGGGNNGGNGGGGGGGGGGGGgKHHHVhHVHK......',
+  '........KHHHHhhHKGGGGYGYGGGGGGGGGGGGGGOGOGOGGGGgKhhHHHHhHHK.....',
+  '.......KHHHHHHHHKGGGYYYYYGGGGGNGGGNGGGGOOOGGGGGgKHHHHHHHHK......',
+  '.......KHHLLHHHHKGGGGYCYGGGGGNGGNGGNGGOOOOOGGGGgKHHHLHHHK.......',
+  '......KHHLHHhHHLKGGGYYYYYGGGNGGGNGGGNGGOOOGGGGGgKHHLHHhK........',
+  '.......KHLHHHHHLKGGGGYGYGGGGGNGNGGGNGGOGOGOGGGGgKHHLHHHHK.......',
+  '.......KHHhhHHHHKGGGGGGGGGGGGGNNGGNGGGGGGGGGGGGgKHHHHhHHHK......',
   '........KHHHHHHHKGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGgKHKKKKKKKKK.....',
-  '.........KKKHLLHKGGGGPPGPPGGGGGGGGGGwGGGwGGGGGGgKLKDDDDDDDK.....',
-  '...........KLHHhKGGGGPPPPPGGGGGGGGGGwwGwwGGGGGGgKKKaAAAAAAKK....',
-  '............KHHHKGGGGPPPPPGGGGGGGGGGwwwwwGGGGGGgKKKaAAAAAAAAK...',
-  '.............KhHKGGGGGPPPGGGGGGGGGGGwKwKwGGGGGGgKKKaAAAAAAKAK...',
-  '..............KKKGGGGGGPGGGGGGGGGGGGwwPwwGGGGGGgKKKaAAAAAAKAK...',
-  '...............KKGGGGGGGGGGGGGGGGGGGGwwwGGGGGGGgKKKaAAAAAAAAK...',
+  '.........KKKHLLHKGGGGPPGPPGGGGGGGGGGGGGGGGGGGGGgKLKDDDDDDDK.....',
+  '...........KLHHhKGGGGPPPPPGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAKK....',
+  '............KHHHKGGGGPPPPPGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAAAK...',
+  '.............KhHKGGGGGPPPGGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAKAK...',
+  '..............KKKGGGGGGPGGGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAKAK...',
+  '...............KKGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAAAK...',
   '...............KKGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGgKKKaAAAAAAKK....',
   'KKKKKKKKKKKKKKKKKgggggggggggggggggggggggggggggggKKKaAAAAAAKKKKKK',
   'TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT',
