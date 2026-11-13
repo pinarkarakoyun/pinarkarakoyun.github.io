@@ -1,3 +1,45 @@
+/* ---------- Filtre sekmeleri ---------- */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: calc(var(--space-md) * -1) 0 var(--space-md);
+}
+
+.project-filters__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem; /* 44px dokunma hedefi */
+  padding: 0 0.85rem;
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  color: var(--color-ink);
+  background: var(--color-window);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: 3px 3px 0 var(--color-shadow);
+  cursor: pointer;
+}
+
+.project-filters__tab:hover {
+  background: var(--color-titlebar);
+  color: var(--color-on-titlebar);
+}
+
+/* Seçili sekme: neon ve "basılmış" (gölgesine oturmuş) */
+.project-filters__tab[aria-pressed='true'] {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-shadow);
+}
+
+.project-filters__count {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

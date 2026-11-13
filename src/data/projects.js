@@ -1,5 +1,6 @@
 // Projeler: her biri "Problem → Çözüm" kartı olarak gösterilir.
 // title: düz metin ya da iki dilli { tr, en }.
+// tags: filtre kategorileri: 'business' | 'web' | 'embedded' | 'school' | 'internship'
 // status: 'done' | 'prototype' | 'in-progress' | 'planning'
 //   Rozet metni ve rengi bu anahtardan üretilir (Adım 8).
 // context: projenin türü (staj, ekip, okul...). Gerekmiyorsa yazılmaz.
@@ -13,6 +14,7 @@ export const projects = [
     id: 'mustan-tailoring',
     title: 'Mustan Tailoring',
     status: 'prototype',
+    tags: ['business', 'web'],
     context: { tr: 'Aile işletmesi · Hollanda', en: 'Family business · Netherlands' },
     problem: {
       tr: 'Dayımın terzi dükkânında siparişler iki parçalı makbuz kâğıtlarıyla takip ediliyordu. Müşteri kendi kâğıdını kaybedebiliyor, kâğıtlar karışıyor ve siparişlerde sorun çıkıyordu.',
@@ -41,6 +43,7 @@ export const projects = [
     id: 'dryclean-order-tracking',
     title: { tr: 'Kuru Temizleme Sipariş Takip', en: 'Dry Cleaning Order Tracking' },
     status: 'prototype',
+    tags: ['business', 'web'],
     context: { tr: 'Yerel işletme · Antalya', en: 'Local business · Antalya' },
     problem: {
       tr: 'Kuru temizlemede tek bir siparişte birden fazla parça oluyor ve her parça farklı zamanda hazır olabiliyor. Kâğıt fişle hangi parçanın hangi aşamada olduğunu takip etmek zor.',
@@ -61,6 +64,7 @@ export const projects = [
     id: 'studio-booking',
     title: 'Studio Booking',
     status: 'in-progress',
+    tags: ['business', 'web'],
     problem: {
       tr: 'Mahalle pilates stüdyolarında dersler WhatsApp ve tablolarla ayarlanıyor. Müşteri hangi derste yer olduğunu soruyor, hoca kontenjanı, iptalleri ve telafi derslerini elle takip ediyor.',
       en: 'Neighborhood Pilates studios run their classes through WhatsApp and spreadsheets. Members have to ask which class has room, and the owner tracks capacity, cancellations and make-up classes by hand.',
@@ -84,6 +88,7 @@ export const projects = [
     id: 'personal-finance-tracker',
     title: 'Personal Finance Tracker',
     status: 'done',
+    tags: ['web'],
     problem: {
       tr: 'Gelir ve giderleri not defterinde ya da kafada tutmak ay sonunda paranın nereye gittiğini görmeyi zorlaştırıyor.',
       en: 'Keeping income and expenses in a notebook, or just in your head, makes it hard to see where the money went by the end of the month.',
@@ -103,6 +108,7 @@ export const projects = [
     id: 'ebassist',
     title: 'eBAssist Chatbot',
     status: 'done',
+    tags: ['web', 'internship'],
     context: { tr: 'Staj projesi · AGT', en: 'Internship project · AGT' },
     problem: {
       tr: 'Şirket çalışanları eBA iş akışı platformu ve kurumsal süreçler hakkındaki bilgilere hızlıca ulaşmakta zorlanıyordu.',
@@ -119,6 +125,7 @@ export const projects = [
     id: 'recampus',
     title: 'RECAMPUS',
     status: 'planning',
+    tags: ['school'],
     context: { tr: 'Bitirme projesi · 4 kişilik ekip · Proje yönetimi', en: 'Capstone project · Team of 4 · Project management' },
     problem: {
       tr: 'Öğrenciler dönem sonunda ders kitabı, lamba gibi eşyaları kullanmadan bırakıyor; ihtiyacı olan başka öğrenciler aynısını sıfırdan alıyor. Genel ikinci el sitelerinde öğrenciye özel güven, ders bazlı arama ve takas desteği yok.',
@@ -139,6 +146,7 @@ export const projects = [
     id: '8051-led-matrix',
     title: '8051 Scrolling LED Matrix',
     status: 'done',
+    tags: ['embedded', 'school'],
     context: { tr: 'Ders projesi · Mikroişlemciler', en: 'Course project · Microprocessors' },
     problem: {
       tr: 'Sadece 3 mikrodenetleyici pini kullanarak 32 sütunluk bir LED ekranda kayan yazı göstermek ve bunu butonlarla kontrol etmek.',
@@ -155,6 +163,7 @@ export const projects = [
     id: 'java-oop-projects',
     title: 'Java OOP Projects',
     status: 'done',
+    tags: ['school'],
     context: { tr: 'Ders projeleri · Nesne yönelimli programlama', en: 'Coursework · Object-oriented programming' },
     problem: {
       tr: 'Nesne yönelimli programlamanın temel fikirlerini (kalıtım, çok biçimlilik, olay yönetimi) küçük ama çalışan programlarla pekiştirmek.',
@@ -171,6 +180,7 @@ export const projects = [
     id: 'high-low-card-game',
     title: 'High-Low Card Game',
     status: 'in-progress',
+    tags: ['school'],
     context: { tr: 'Okul projesi', en: 'School project' },
     problem: {
       tr: 'Nesne yönelimli programlamayı gerçekten anlamak için kuralları ve durumu olan küçük ama eksiksiz bir uygulama yazmak istedim.',

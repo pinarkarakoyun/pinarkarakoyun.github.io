@@ -37,6 +37,16 @@ export const ui = {
     github: { tr: 'GitHub', en: 'GitHub' },
     tech: { tr: 'Kullanılan teknolojiler', en: 'Technologies used' },
   },
+  filters: {
+    label: { tr: 'Projeleri filtrele', en: 'Filter projects' },
+    all: { tr: 'Tümü', en: 'All' },
+    business: { tr: 'Gerçek işletmeler', en: 'Real businesses' },
+    web: { tr: 'Web', en: 'Web' },
+    embedded: { tr: 'Gömülü', en: 'Embedded' },
+    school: { tr: 'Okul', en: 'School' },
+    internship: { tr: 'Staj', en: 'Internship' },
+    showing: { tr: 'proje gösteriliyor', en: 'projects shown' },
+  },
   status: {
     done: { tr: 'Tamamlandı', en: 'Completed' },
     prototype: { tr: 'Prototip', en: 'Prototype' },
