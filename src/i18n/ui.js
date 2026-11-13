@@ -37,6 +37,15 @@ export const ui = {
     github: { tr: 'GitHub', en: 'GitHub' },
     tech: { tr: 'Kullanılan teknolojiler', en: 'Technologies used' },
   },
+  caseStudy: {
+    open: { tr: 'Detayı oku', en: 'Read case study' },
+    close: { tr: 'Kapat', en: 'Close' },
+    approach: { tr: 'Yaklaşım', en: 'Approach' },
+    decisions: { tr: 'Teknik kararlar', en: 'Technical decisions' },
+    challenges: { tr: 'Teknik zorluklar', en: 'Technical challenges' },
+    outcome: { tr: 'Sonuç', en: 'Outcome' },
+    different: { tr: 'Şimdi olsa farklı yapardım', en: "What I'd do differently" },
+  },
   filters: {
     label: { tr: 'Projeleri filtrele', en: 'Filter projects' },
     all: { tr: 'Tümü', en: 'All' },

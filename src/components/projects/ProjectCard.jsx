@@ -2,6 +2,7 @@ import { useLanguage } from '../../i18n/useLanguage.js'
 import { ui } from '../../i18n/ui.js'
 import { PixelIcon } from '../PixelIcon.jsx'
 import { WindowTitle } from '../WindowTitle.jsx'
+import { CaseStudyDialog } from './CaseStudyDialog.jsx'
 import { StatusBadge } from './StatusBadge.jsx'
 
 // Tek bir proje: "Problem → Çözüm" anlatımlı pencere kartı.
@@ -61,12 +62,17 @@ export function ProjectCard({ project }) {
               ))}
             </ul>
           )}
-          {links.github && (
-            <a className="pixel-button project-card__link" href={links.github} target="_blank" rel="noreferrer">
-              <PixelIcon name="github" size={16} />
-              {t(ui.project.github)}
-              <span className="visually-hidden">: {t(title)}</span>
-            </a>
+          {(project.caseStudy || links.github) && (
+            <div className="project-card__actions">
+              {project.caseStudy && <CaseStudyDialog project={project} />}
+              {links.github && (
+                <a className="pixel-button project-card__link" href={links.github} target="_blank" rel="noreferrer">
+                  <PixelIcon name="github" size={16} />
+                  {t(ui.project.github)}
+                  <span className="visually-hidden">: {t(title)}</span>
+                </a>
+              )}
+            </div>
           )}
         </footer>
       </div>

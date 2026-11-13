@@ -139,6 +139,76 @@
   color: var(--color-ink-soft);
 }
 
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* ---------- Vaka çalışması penceresi ---------- */
+.case-study {
+  width: min(640px, calc(100% - 2rem));
+  max-height: 85vh;
+  padding: 0;
+  color: var(--color-ink);
+  overflow: auto;
+}
+
+.case-study::backdrop {
+  background: rgb(15 9 24 / 0.7);
+}
+
+.case-study .window__titlebar {
+  position: sticky;
+  top: 0;
+}
+
+.case-study__close {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 2px solid var(--color-border);
+  background: var(--color-window);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.case-study__close:hover {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.case-study__body {
+  padding: var(--space-md);
+}
+
+.case-study__body h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.case-study__body h4 {
+  margin: var(--space-sm) 0 0.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.625rem;
+  color: var(--color-accent);
+}
+
+.case-study__body h4::before {
+  content: '> ';
+}
+
+.case-study__body p,
+.case-study__body ul {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.case-study__body ul {
+  padding-left: 1.25rem;
+}
+
 .project-card__link {
   font-size: 0.625rem;
   padding: 0.6rem 0.8rem;

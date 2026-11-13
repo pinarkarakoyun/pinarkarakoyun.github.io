@@ -7,6 +7,8 @@
 // progress: devam eden projelerde şimdiye kadar yapılanlar. Gerekmiyorsa yazılmaz.
 // next: sıradaki hedef / yol haritası notu. Gerekmiyorsa yazılmaz.
 // links.github: repo yoksa null.
+// caseStudy: "Detayı oku" penceresindeki vaka çalışması (yaklaşım, teknik noktalar, sonuç,
+//   farklı ne yapardım). pointsTitle: 'decisions' | 'challenges'. Gerekmiyorsa yazılmaz.
 // image: kartın üstündeki ekran görüntüsü (public/projects altında, 960x600). Gerekmiyorsa yazılmaz.
 
 export const projects = [
@@ -34,6 +36,31 @@ export const projects = [
       alt: {
         tr: 'İki ekran: Mustan Tailoring tanıtım sitesinin ana sayfası ve “teslime hazır” durumundaki bir siparişin müşteri takip sayfası',
         en: 'Two screens: the Mustan Tailoring home page and the customer tracking page of an order that is ready for pickup',
+      },
+    },
+    caseStudy: {
+      approach: {
+        tr: 'Önce dükkânın kâğıt makbuzla işleyişini yazdım, sonra her şeyi dayımın hızına göre tasarladım: sipariş sadece ad ve telefonla açılıyor, detaylar sonra dolduruluyor.',
+        en: "I first wrote down how the shop worked with paper receipts, then designed everything around my uncle's pace: an order opens with just a name and phone number, and details are filled in later.",
+      },
+      pointsTitle: 'decisions',
+      points: {
+        tr: [
+          'Takip linki tahmin edilemeyen rastgele bir anahtarla açılıyor; telefon ve iç notlar müşteriye hiç görünmüyor.',
+          'Her durum değişikliği zaman damgasıyla saklanıyor (zaman çizelgesi ve ileride istatistik için).',
+        ],
+        en: [
+          'Tracking links use an unguessable random token; the phone number and internal notes are never shown to customers.',
+          'Every status change is stored with a timestamp (for the timeline and future statistics).',
+        ],
+      },
+      outcome: {
+        tr: 'Demo verili bir prototip; tanıtım sitesiyle birlikte yayına hazırlanıyor.',
+        en: 'A prototype with demo data, being prepared to go live together with the shop website.',
+      },
+      different: {
+        tr: 'Siparişler şu an sunucu belleğinde tutuluyor. Kalıcı veritabanını baştan kurardım; Kuru Temizleme’de öyle yaptım.',
+        en: 'Orders currently live in server memory. I would set up a persistent database from the start, which is what I did in the dry cleaning project.',
       },
     },
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'next-intl', 'QR'],
@@ -80,6 +107,31 @@ export const projects = [
     image: {
       src: 'projects/studio-booking.jpg',
       alt: { tr: 'İki telefon ekranı: üyenin sıradaki dersi ve yöneticinin bugünkü dersleri', en: "Two phone screens: a member's next class and the admin's classes for today" },
+    },
+    caseStudy: {
+      approach: {
+        tr: 'Kod yazmadan önce iş kurallarını netleştirdim. Doluluk saklanmıyor, her seferinde hesaplanıyor; kurallar koda gömülü değil, stüdyo sahibinin ayarı.',
+        en: 'I pinned down the business rules before writing code. Occupancy is calculated rather than stored, and the rules are studio settings instead of hard-coded values.',
+      },
+      pointsTitle: 'challenges',
+      points: {
+        tr: [
+          'Son boş yere aynı anda iki kişi yazamıyor: ders satırı veritabanında kilitleniyor. Bunu eşzamanlı isteklerle test ettim.',
+          'Yaklaşık 130 test, ayrı bir test veritabanında çalışıyor.',
+        ],
+        en: [
+          'Two people can never take the last spot at once: the class row is locked in the database. I tested this with concurrent requests.',
+          'About 130 tests run against a separate test database.',
+        ],
+      },
+      outcome: {
+        tr: 'Üye ve yönetici akışları çalışıyor; sırada yayına alma ve gerçek bir stüdyoda pilot var.',
+        en: 'Member and admin flows work; next are deployment and a pilot with a real studio.',
+      },
+      different: {
+        tr: 'README’yi kodla birlikte güncel tutardım: proje ilerlemişken README hâlâ “geliştirme başlıyor” diyordu.',
+        en: 'I would keep the README up to date with the code: it still said “development starting” while the project was well underway.',
+      },
     },
     tech: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Docker'],
     links: { github: 'https://github.com/pinarkarakoyun/studio-booking' },
