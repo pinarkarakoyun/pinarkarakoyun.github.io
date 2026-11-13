@@ -4,6 +4,7 @@ import { ui } from '../i18n/ui.js'
 import { Avatar } from './avatar/Avatar.jsx'
 import { WalkingCat } from './cat/WalkingCat.jsx'
 import { CvDownloadLink } from './CvDownloadLink.jsx'
+import { TypewriterText } from './TypewriterText.jsx'
 import { WindowTitle } from './WindowTitle.jsx'
 import './Hero.css'
 
@@ -16,7 +17,7 @@ export function Hero() {
         <p className="hero__player">{t(ui.hero.player)}</p>
         <h1 className="hero__title">
           <span className="hero__greeting">{t(ui.hero.greeting)}</span>
-          {profile.name}
+          <TypewriterText text={profile.name} />
         </h1>
         <p className="hero__role">{t(profile.title)}</p>
         <p className="hero__tagline">{t(profile.tagline)}</p>

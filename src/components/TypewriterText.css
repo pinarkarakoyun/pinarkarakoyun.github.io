@@ -1,0 +1,36 @@
+/* Kelime bölünmez: satır sadece kelimeler arasındaki boşlukta kırılır */
+.typewriter__word {
+  white-space: nowrap;
+}
+
+/* Henüz yazılmamış harfler: yer kaplar ama görünmez */
+.typewriter__rest {
+  visibility: hidden;
+}
+
+/* █ blok imleç: piksel temaya uygun, adım adım yanıp söner.
+   Genişliği sıfır, görüntüsü kenara taşar: imleç satır kırılımlarını değiştirmesin. */
+.typewriter__cursor {
+  display: inline-block;
+  width: 0;
+  height: 0.85em;
+  vertical-align: -0.05em;
+  position: relative;
+}
+
+.typewriter__cursor::after {
+  content: '';
+  position: absolute;
+  left: 0.08em;
+  top: 0;
+  width: 0.55em;
+  height: 100%;
+  background: var(--color-accent);
+  animation: typewriter-blink 1s steps(1) infinite;
+}
+
+@keyframes typewriter-blink {
+  50% {
+    opacity: 0;
+  }
+}
